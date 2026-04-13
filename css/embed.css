@@ -1,0 +1,116 @@
+/* Dayzo Embed Widget Styles */
+
+body.mode-embed {
+  background: transparent;
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: var(--font-family-base);
+}
+
+.embed-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: background-color var(--transition-normal);
+}
+
+.embed-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.embed-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.embed-countdown-wrap {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.embed-segment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-secondary);
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  min-width: 45px;
+  border: 1px solid var(--border-color);
+}
+
+.embed-num {
+  font-size: 1.35rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-primary);
+  line-height: 1;
+  font-family: var(--font-family-numbers);
+}
+
+.embed-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.embed-footer {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.embed-brand {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.embed-brand span {
+  color: var(--color-primary);
+}
+
+/* Auto-hiding based on extremely small widths */
+@media (max-width: 250px) {
+  .embed-segment { min-width: 35px; padding: 4px; }
+  .embed-num { font-size: 1.1rem; }
+  .embed-label { display: none; }
+  .embed-title { font-size: 0.9rem; }
+}
+
+/* Finished state */
+.embed-finished {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}

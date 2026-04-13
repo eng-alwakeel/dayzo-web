@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer en Direct - Dayzo</title>
+    <link rel="canonical" href="https://dayzo.com/fr/create-live/">
+    <link rel="alternate" hreflang="en" href="https://dayzo.com/en/create-live/">
+    <link rel="alternate" hreflang="es" href="https://dayzo.com/es/create-live/">
+    <link rel="alternate" hreflang="pt" href="https://dayzo.com/pt/create-live/">
+    <link rel="alternate" hreflang="fr" href="https://dayzo.com/fr/create-live/">
+    <link rel="alternate" hreflang="de" href="https://dayzo.com/de/create-live/">
+    <link rel="alternate" hreflang="ar" href="https://dayzo.com/ar/create-live/">
+    <link rel="alternate" hreflang="hi" href="https://dayzo.com/hi/create-live/">
+    <link rel="alternate" hreflang="id" href="https://dayzo.com/id/create-live/">
+    <link rel="alternate" hreflang="zh" href="https://dayzo.com/zh/create-live/">
+    <link rel="alternate" hreflang="x-default" href="https://dayzo.com/en/create-live/">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/base.css">
+    
+    <link rel="stylesheet" href="/css/create-live.css">
+    <script type="module" src="/js/core/theme.js"></script>
+    <script type="module" src="/js/core/lang-switcher.js"></script>
+</head>
+<body>
+    <header class="brand-header">
+        <a href="/fr/" class="brand-logo">Dayzo</a>
+        <div class="header-actions">
+            <select id="lang-switcher" class="lang-switcher"></select>
+            <button id="theme-toggle" class="theme-toggle-btn">☀️ / 🌙</button>
+        </div>
+    </header>
+    <main class="container">
+        <div class="create-form-container">
+            <h1 class="section-title" data-i18n="ui.form_header">Générer un Compte à Rebours en Direct</h1>
+            <form id="create-live-form">
+                <div class="form-group">
+                    <label class="form-label" data-i18n="ui.form_title">Titre de l'Événement</label>
+                    <input type="text" id="c-title" class="form-input" placeholder="e.g. Apple Keynote" data-i18n="ui.placeholder_event">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" data-i18n="ui.form_template">Base du Modèle</label>
+                    <select id="c-template" class="form-input" style="appearance: auto;">
+                        <option value="" data-i18n="ui.base_template">Base (No Template)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" data-i18n="ui.form_date">Date et Heure (Locale)</label>
+                    <input type="datetime-local" id="c-date" class="form-input" required>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_text_color">Couleur du Texte</label>
+                        <input type="color" id="c-text-color" class="form-input" value="#FFFFFF" style="padding:4px; height:48px;">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_num_color">Couleur des Chiffres</label>
+                        <input type="color" id="c-num-color" class="form-input" value="#FFFFFF" style="padding:4px; height:48px;">
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_font_family">Famille de Police</label>
+                        <select id="c-font" class="form-input" style="appearance: auto;">
+                            <option value="var(--font-family-sans)" data-i18n="ui.font_modern">Moderne (Sans)</option>
+                            <option value="'Tajawal', sans-serif" data-i18n="ui.font_arabic">Arabe (Tajawal)</option>
+                            <option value="'Georgia', serif" data-i18n="ui.font_classic">Classique (Serif)</option>
+                            <option value="'Courier New', monospace" data-i18n="ui.font_digital">Numérique (Mono)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_show_qr">Afficher le Code QR</label>
+                        <select id="c-qr" class="form-input" style="appearance: auto;">
+                            <option value="true" data-i18n="ui.yes">Yes</option>
+                            <option value="false" data-i18n="ui.no">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_title_size">Taille de Police du Titre (vh)</label>
+                        <input type="number" id="c-title-size" class="form-input" placeholder="5" min="1" max="20" step="0.5">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_num_size">Taille des Chiffres (vh)</label>
+                        <input type="number" id="c-num-size" class="form-input" placeholder="12" min="5" max="40" step="0.5">
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_color">Couleur d'Accentuation (Hex)</label>
+                        <input type="color" id="c-color" class="form-input" value="#7C3AED" style="padding:4px; height:48px;">
+                    </div>
+                     <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_logo">URL de l'Image du Logo</label>
+                        <input type="url" id="c-logo" class="form-input" placeholder="https://...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" data-i18n="ui.form_bg">URL de l'Image de Fond</label>
+                    <input type="url" id="c-bg" class="form-input" placeholder="https://...">
+                </div>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_cta_text">Texte du Bouton CTA</label>
+                        <input type="text" id="c-cta" class="form-input" placeholder="Join Stream" data-i18n="ui.placeholder_cta">
+                    </div>
+                     <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_link">URL du Lien CTA/Direct</label>
+                        <input type="url" id="c-link" class="form-input" placeholder="https://...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" data-i18n="ui.form_video">URL de la Vidéo YouTube/Intégration</label>
+                    <input type="url" id="c-video" class="form-input" placeholder="YouTube URL" data-i18n="ui.placeholder_video">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-primary" id="btn-preview" data-i18n="ui.btn_preview_live">Preview</button>
+                    <button type="button" class="btn btn-secondary" id="btn-copy" data-i18n="ui.btn_copy_link">Copier le Lien</button>
+                </div>
+            </form>
+            <div class="preview-card" style="margin-top: 32px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-color); display: none;" id="live-preview-container">
+                <h3 style="margin-bottom: 16px; font-size: 1rem; opacity: 0.7; text-transform: uppercase;" data-i18n="ui.live_preview">Live Preview</h3>
+                <iframe id="preview-iframe" style="width: 100%; height: 400px; border: none; border-radius: var(--radius-md); background: #000;"></iframe>
+            </div>
+            <div class="result-section" id="result-section">
+                <div class="generated-url-box" id="generated-url"></div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="/js/pages/create-live.js"></script>
+</body>
+</html>

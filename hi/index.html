@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="ui.upcoming_events">आगामी कार्यक्रम</title>
+    <link rel="canonical" href="https://dayzo.com/hi/">
+    <link rel="alternate" hreflang="en" href="https://dayzo.com/en/">
+    <link rel="alternate" hreflang="es" href="https://dayzo.com/es/">
+    <link rel="alternate" hreflang="pt" href="https://dayzo.com/pt/">
+    <link rel="alternate" hreflang="fr" href="https://dayzo.com/fr/">
+    <link rel="alternate" hreflang="de" href="https://dayzo.com/de/">
+    <link rel="alternate" hreflang="ar" href="https://dayzo.com/ar/">
+    <link rel="alternate" hreflang="hi" href="https://dayzo.com/hi/">
+    <link rel="alternate" hreflang="id" href="https://dayzo.com/id/">
+    <link rel="alternate" hreflang="zh" href="https://dayzo.com/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://dayzo.com/en/">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/base.css">
+    
+    <link rel="stylesheet" href="/css/homepage.css">
+    <script type="module" src="/js/core/theme.js"></script>
+    <script type="module" src="/js/core/lang-switcher.js"></script>
+</head>
+<body>
+    
+    <header class="brand-header">
+        <a href="/hi/" class="brand-logo">Dayzo</a>
+        <div class="header-actions">
+            <select id="lang-switcher" class="lang-switcher"></select>
+            <button id="theme-toggle" class="theme-toggle-btn">☀️ / 🌙</button>
+        </div>
+    </header>
+    
+
+    <main class="container" id="app-root">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="local-clock" id="base-clock">--:--:--</h1>
+            <div class="search-container">
+                <input type="text" id="event-search-input" class="search-input" placeholder="आयोजन खोजें..." data-i18n="ui.search_placeholder">
+                <div id="search-results-grid" class="events-grid" style="margin-top: 24px;"></div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section class="section" id="upcoming">
+            <h2 class="section-title" data-i18n="ui.upcoming_events">आगामी कार्यक्रम</h2>
+            <div id="upcoming-events-grid" class="events-grid">
+                <!-- Injected via JS -->
+            </div>
+        </section>
+
+        <!-- Trending -->
+        <section class="section" id="trending">
+            <h2 class="section-title" data-i18n="ui.trending_events">ट्रेंडिंग</h2>
+            <div id="trending-events-grid" class="events-grid">
+                <!-- Injected via JS -->
+            </div>
+        </section>
+
+        <!-- Popular locally (Placeholder for specific logic later) -->
+        <section class="section" id="local">
+            <h2 class="section-title" data-i18n="ui.popular_in_country">आपके क्षेत्र में लोकप्रिय</h2>
+            <div id="local-events-grid" class="events-grid">
+                <!-- Injected via JS -->
+            </div>
+        </section>
+
+        <div class="create-banner">
+            <h2 class="section-title" data-i18n="ui.create_your_own">अपनी खुद की उलटी गिनती बनाएं</h2>
+            <a href="/hi/create-live" class="btn btn-primary" data-i18n="ui.create_cta">शुरू करें</a>
+        </div>
+
+        <!-- Personal Event Templates -->
+        <section class="section" id="personal-templates">
+            <h2 class="section-title" data-i18n="ui.personal_templates_title">Personal Event Templates</h2>
+            <p class="section-desc" data-i18n="ui.personal_templates_desc">Choose a beautiful template for your personal celebration.</p>
+            <div id="personal-templates-grid" class="events-grid">
+                <!-- Injected via JS -->
+            </div>
+        </section>
+    </main>
+    
+    <script type="module" src="/js/pages/homepage.js"></script>
+</body>
+</html>

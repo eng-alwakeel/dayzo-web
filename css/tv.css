@@ -1,0 +1,140 @@
+/* Dayzo TV Mode Styles */
+/* Inherits core immersion from base, refined for display-only contexts */
+
+body.mode-tv {
+  background: #000000;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: var(--font-family-base);
+}
+
+.tv-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+.tv-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.9) 100%);
+}
+
+.tv-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 4vh;
+  text-align: center;
+}
+
+.tv-title {
+  font-size: clamp(3rem, 12vh, 10rem);
+  font-weight: 900;
+  margin-bottom: 2vh;
+  text-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  letter-spacing: -0.04em;
+  color: #FFFFFF;
+}
+
+.tv-countdown-wrap {
+  display: flex;
+  gap: 4vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+.tv-segment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tv-num {
+  font-size: clamp(5rem, 25vh, 20rem);
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  line-height: .8;
+  text-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  font-family: var(--font-family-numbers);
+  color: #FFFFFF;
+}
+
+.tv-label {
+  font-size: clamp(1rem, 3vh, 3.5rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 2vh;
+}
+
+/* TV specific final countdown overrides */
+.tv-final-10 .tv-final-num {
+  font-size: 50vh;
+  font-weight: 900;
+  color: var(--color-primary);
+  text-shadow: 0 0 100px rgba(124, 58, 237, 0.8);
+}
+
+/* Subtle Branding */
+.tv-branding {
+  position: absolute;
+  top: 4vh;
+  left: 4vh;
+  font-size: 1.5rem;
+  font-weight: 900;
+  opacity: 0.4;
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+}
+
+/* TV QR Box - Highly visible at the bottom */
+.tv-qr-region {
+  position: absolute;
+  bottom: 4vh;
+  right: 4vh;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 16px 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+  color: #000;
+}
+
+.tv-qr-text {
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+#qrcode-canvas {
+  width: 100px !important;
+  height: 100px !important;
+}
+
+@media (max-width: 1024px) {
+  .tv-num { font-size: 15vh; }
+  .tv-title { font-size: 6vh; }
+}

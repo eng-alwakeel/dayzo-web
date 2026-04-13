@@ -1,0 +1,302 @@
+/* Dayzo SEO Event Page Specific Styles */
+
+.seo-header {
+  text-align: center;
+  margin-top: 64px;
+  margin-bottom: 24px;
+}
+
+.seo-h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.next-occurrence {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+.quick-answer {
+  max-width: 600px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.quick-answer p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Countdown Design Engine */
+.countdown-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  gap: clamp(12px, 4vw, 32px);
+}
+
+.countdown-segment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+.countdown-value {
+  font-size: clamp(4rem, 15vw, 9rem);
+  font-weight: 900;
+  color: var(--color-primary);
+  line-height: 0.85;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 12px;
+  font-family: var(--font-family-numbers);
+  letter-spacing: -0.02em;
+}
+
+.countdown-label {
+  font-size: clamp(0.7rem, 2vw, 0.875rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.2em;
+  opacity: 0.7;
+}
+
+.event-description {
+  max-width: 800px;
+  margin: 0 auto 64px;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* Enriched Content Cards */
+.enriched-content {
+  max-width: 800px;
+  margin: 0 auto 64px;
+}
+
+.content-block {
+  margin-bottom: 40px;
+  padding: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.content-block:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-primary-soft);
+}
+
+.content-block .section-title {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.content-text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* Share & Embed Details */
+.share-embed-section {
+  max-width: 800px;
+  margin: 0 auto 64px;
+  padding: 32px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.share-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.share-input {
+  flex: 1;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.share-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.2), var(--shadow-glow);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+/* FAQ */
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto 64px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-color);
+  padding: 24px 0;
+}
+
+.faq-question {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.faq-answer {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Related Events Section */
+.related-countdowns {
+  margin-top: 80px;
+}
+
+.related-countdowns .section-title {
+  font-size: 1.75rem;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+#related-events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.related-countdowns .event-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  box-shadow: var(--shadow-md);
+}
+
+.related-countdowns .event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-primary);
+}
+
+.related-countdowns .card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Redesigned Create CTA */
+.create-cta-section {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.create-cta-card {
+  background: linear-gradient(135deg, var(--color-primary), #6366f1);
+  color: #FFFFFF;
+  padding: 80px 40px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 32px 64px rgba(124, 58, 237, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.create-cta-card h2 {
+  color: #FFFFFF;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -0.03em;
+}
+
+.create-cta-card p {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 600px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.create-cta-card .btn-primary {
+  background: #FFFFFF !important;
+  color: var(--color-primary) !important;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  margin-top: 12px;
+  font-size: 1.125rem;
+  padding: 16px 40px;
+}
+
+.create-cta-card .btn-primary:hover {
+  background: #F1F5F9 !important;
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.hero-actions {
+  text-align: center;
+  margin: 0 0 48px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hero-actions .btn {
+  font-size: 0.9rem;
+  padding: 12px 24px;
+}
+
+@media (max-width: 640px) {
+  .countdown-hero { gap: 8px; margin: 32px 0; }
+  .countdown-segment { min-width: 60px; }
+  .countdown-value { font-size: clamp(2.5rem, 12vw, 4rem); }
+  .countdown-label { font-size: 0.65rem; letter-spacing: 0.1em; }
+  .content-block { padding: 20px; }
+  .create-cta-card { padding: 32px 20px; border-radius: 20px; }
+  .create-cta-card h2 { font-size: 1.5rem; }
+  .hero-actions { flex-direction: column; align-items: stretch; padding: 0 16px; gap: 12px; }
+  .hero-actions .btn { margin: 0 !important; width: 100%; }
+}

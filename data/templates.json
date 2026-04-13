@@ -1,0 +1,44 @@
+[
+    {
+        "id": "ai-products",
+        "name_key": "ai_categories.products.title",
+        "desc_key": "ai_categories.products.desc",
+        "previewGradient": "linear-gradient(135deg, #7C3AED 0%, #C4B5FD 100%)",
+        "icon": "📦"
+    },
+    {
+        "id": "ai-social",
+        "name_key": "ai_categories.social.title",
+        "desc_key": "ai_categories.social.desc",
+        "previewGradient": "linear-gradient(135deg, #22C55E 0%, #86EFAC 100%)",
+        "icon": "📱"
+    },
+    {
+        "id": "ai-marketing",
+        "name_key": "ai_categories.marketing.title",
+        "desc_key": "ai_categories.marketing.desc",
+        "previewGradient": "linear-gradient(135deg, #F59E0B 0%, #FCD34D 100%)",
+        "icon": "🚀"
+    },
+    {
+        "id": "ai-realistic",
+        "name_key": "ai_categories.realistic.title",
+        "desc_key": "ai_categories.realistic.desc",
+        "previewGradient": "linear-gradient(135deg, #00C6FF 0%, #0072FF 100%)",
+        "icon": "📷"
+    },
+    {
+        "id": "ai-fantasy",
+        "name_key": "ai_categories.fantasy.title",
+        "desc_key": "ai_categories.fantasy.desc",
+        "previewGradient": "linear-gradient(135deg, #FF416C 0%, #FF4B2B 100%)",
+        "icon": "🎨"
+    },
+    {
+        "id": "ai-print",
+        "name_key": "ai_categories.print.title",
+        "desc_key": "ai_categories.print.desc",
+        "previewGradient": "linear-gradient(135deg, #0A0A0A 0%, #334155 100%)",
+        "icon": "🖨️"
+    }
+]

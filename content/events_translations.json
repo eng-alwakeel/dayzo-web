@@ -1,0 +1,364 @@
+{
+  "new-year": {
+    "en": {
+      "title": "New Year Countdown - How many days until New Year?",
+      "description": "Countdown to the start of the New Year. Watch the time tick down in days, hours, minutes and seconds.",
+      "quick_answer": "The New Year starts in {days} days on {date}.",
+      "faq": [
+        {
+          "question": "When is New Year's Day?",
+          "answer": "New Year's Day is on {date}."
+        },
+        {
+          "question": "How long until the New Year?",
+          "answer": "There are {days} days left until we welcome the New Year."
+        }
+      ],
+      "summary": "New Year's Day is the first day of the year on the modern Gregorian calendar as well as the Julian calendar.",
+      "history": "In many countries, New Year's Day is celebrated with fireworks and other festivities at midnight as the new year begins in each time zone. It is a time for resolutions and new beginnings.",
+      "why_people_search": "People search for the New Year countdown to experience the exact moment of the transition into the next year, often as part of parties or midnight celebrations."
+    },
+    "ar": {
+      "title": "عداد السنة الجديدة - كم يوماً باقياً على العام الجديد؟",
+      "description": "العد التنازلي لبداية العام الجديد. شاهد الوقت يتناقص بالأيام والساعات والدقائق والثواني.",
+      "quick_answer": "يبدأ العام الجديد خلال {days} يوم في {date}.",
+      "faq": [
+        {
+          "question": "متى يكون يوم رأس السنة؟",
+          "answer": "يوم رأس السنة هو في {date}."
+        },
+        {
+          "question": "كم من الوقت तक العام الجديد؟",
+          "answer": "هناك {days} يوم متبقية حتى نستقبل العام الجديد."
+        }
+      ]
+    },
+    "hi": {
+      "title": "नए साल की उलटी गिनती - नए साल तक कितने दिन?",
+      "description": "नए साल की शुरुआत की उलटी गिनती। दिनों, घंटों, मिनटों और सेकंडों में समय कम होते देखें।",
+      "quick_answer": "नया साल {days} दिनों में {date} को शुरू होगा।",
+      "summary": "नया साल आधुनिक ग्रेगोरियन कैलेंडर के साथ-साथ जूलियन कैलेंडर पर साल का पहला दिन है।",
+      "history": "कई देशों में, नए साल का जश्न मध्यरात्रि में आतिशबाजी के साथ मनाया जाता है क्योंकि प्रत्येक समय क्षेत्र में नया साल शुरू होता है।",
+      "why_people_search": "लोग पार्टी या मध्यरात्रि के जश्न के हिस्से के रूप में अगले वर्ष में संक्रमण के सटीक क्षण का अनुभव करने के लिए नए साल की उलटी गिनती खोजते हैं।"
+    },
+    "zh": {
+      "title": "新年倒计时 - 距离新年还有多少天？",
+      "description": "新年倒计时。以天、小时、分钟和秒为单位观察时间的流逝。",
+      "quick_answer": "新年将在 {days} 天后的 {date} 开始。",
+      "summary": "元旦是现代格里高利历以及儒略历中一年的第一天。",
+      "history": "在许多国家，元旦午夜会举行烟花汇演和其他庆祝活动，标志着每个时区新的一年的开始。",
+      "why_people_search": "人们搜索新年倒计时是为了体验进入下一年的确切时刻，通常将其作为派对或午夜庆祝活动的一部分。"
+    }
+  },
+  "valentines-day": {
+    "en": {
+      "summary": "Valentine's Day, also called Saint Valentine's Day or the Feast of Saint Valentine, is celebrated annually on February 14.",
+      "history": "Originating as a Christian feast day honoring one or two early Christian martyrs named Saint Valentine, it has become a significant cultural celebration of romance and love.",
+      "why_people_search": "Countdowns to Valentine's Day are popular for planning romantic dinners, gift purchases, and ensuring special plans are made in time."
+    },
+    "ar": {
+      "name": "عيد الحب",
+      "summary": "عيد الحب، ويُسمى أيضاً يوم القديس فالنتين، يتم الاحتفال به سنوياً في تاريخ 14 فبراير كذكرى رومانسية.",
+      "history": "نشأ كعيد مسيحي تكريماً لشهيد مسيحي يدعى القديس فالنتين، ثم أصبح لاحقاً احتفالاً ثقافياً كبيراً بالحب والمودة.",
+      "why_people_search": "يُعد العد التنازلي لعيد الحب رائجاً للتخطيط للعشاء الرومانسي، وشراء الهدايا، وضمان اكتمال الخطط الخاصة في الوقت المناسب."
+    }
+  },
+  "earth-day": {
+    "en": {
+      "summary": "Earth Day is an annual event on April 22 to demonstrate support for environmental protection.",
+      "history": "First held on April 22, 1970, it now includes a wide range of events coordinated globally by Earthday.org including 1 billion people in more than 193 countries.",
+      "why_people_search": "Schools, organizations, and individuals use the countdown to coordinate environmental awareness campaigns and local cleanup events."
+    }
+  },
+  "summer": {
+    "en": {
+      "summary": "Summer is the warmest of the four temperate seasons, falling between spring and autumn.",
+      "history": "Astronomically, the summer solstice (around June 21 in the Northern Hemisphere) marks the official start of summer, characterized by the longest day of the year.",
+      "why_people_search": "The countdown to summer is a major trend for students looking forward to school breaks and travelers planning their summer vacations."
+    }
+  },
+  "autumn": {
+    "en": {
+      "summary": "Autumn, also known as fall, is the season when the duration of daylight becomes noticeably shorter and the temperature cools considerably.",
+      "history": "Autumn begins with the autumnal equinox (around September 22-23). It is traditionally associated with the harvest season in many cultures.",
+      "why_people_search": "People look forward to autumn for the changing colors of leaves, 'pumpkin spice' culture, and the relief from summer heat."
+    }
+  },
+  "halloween": {
+    "en": {
+      "summary": "Halloween or Hallowe'en is a celebration observed in many countries on 31 October, the eve of the Western Christian feast of All Hallows' Day.",
+      "history": "It is widely believed that many Halloween traditions originated from ancient Celtic harvest festivals, particularly the Gaelic festival Samhain.",
+      "why_people_search": "Fans of spooky season search for this countdown to prepare costumes, decorate their homes, and plan themed parties well in advance."
+    }
+  },
+  "winter": {
+    "en": {
+      "summary": "Winter is the coldest season of the year in polar and temperate climates, between autumn and spring.",
+      "history": "Winter begins at the winter solstice, which is the shortest day of the year. In the Northern Hemisphere, this usually occurs around December 21-22.",
+      "why_people_search": "People search for the winter countdown to prepare for colder weather, winter sports, and the distinctive cozy atmosphere of the season."
+    }
+  },
+  "christmas": {
+    "en": {
+      "title": "How many days until Christmas? Countdown to Christmas",
+      "description": "A live countdown timer tracking exactly how many days, hours, minutes, and seconds are left until Christmas Day.",
+      "quick_answer": "There are exactly {days} days until Christmas on {date}.",
+      "faq": [
+        {
+          "question": "When exactly is Christmas?",
+          "answer": "Christmas will take place on {date}."
+        },
+        {
+          "question": "How many days are left until Christmas?",
+          "answer": "There are exactly {days} days remaining until Christmas."
+        }
+      ],
+      "summary": "Christmas is an annual festival commemorating the birth of Jesus Christ, observed primarily on December 25 as a religious and cultural celebration among billions of people around the world.",
+      "history": "Modern Christmas traditions evolved from various religious and secular origins, including the Nativity of Jesus and winter solstice festivals. It became a public holiday in many countries in the 19th century.",
+      "why_people_search": "People search for the Christmas countdown to plan holiday gatherings, travel, shopping, and to build excitement for one of the biggest festive seasons of the year."
+    },
+    "ar": {
+      "title": "كم يوماً باقياً على عيد الميلاد؟ عداد تنازلي لعيد الميلاد",
+      "description": "عداد تنازلي مباشر يتتبع الأيام، الساعات، الدقائق، والثواني المتبقية حتى عيد الميلاد.",
+      "quick_answer": "يوجد تحديدًا {days} يوم حتى عيد الميلاد في {date}.",
+      "faq": [
+        {
+          "question": "متى سيحدث عيد الميلاد بالضبط؟",
+          "answer": "سيحدث عيد الميلاد في الموعد القادم بتاريخ {date}."
+        },
+        {
+          "question": "كم عدد الأيام المتبقية حتى عيد الميلاد؟",
+          "answer": "متبقي تحديدًا {days} يوماً على عيد الميلاد."
+        }
+      ],
+      "name": "عيد الميلاد",
+      "summary": "عيد الميلاد هو مهرजान سنوي يحيي ذكرى ميلاد يسوع المسيح، ويتم الاحتفال به في المقام الأول في 25 ديسمبر كاحتفال ديني وثقافي بين المليارات من الناس حول العالم.",
+      "history": "تطورت تقاليد الكريسماس الحديثة من أصول دينية وعلمانية مختلفة، بما في ذلك ميلاد يسوع ومهرجانات الانقلاب الشتوي. أصبح عطلة عامة في العديد من البلدان في القرن التاسع عشر.",
+      "why_people_search": "يبحث الناس عن عداد الكريسماس للتخطيط للتجمعات والعطلات والسفر والتسوق وبناء الإثارة لأحد أكبر المواسم الاحتفالية في العام."
+    },
+    "hi": {
+      "title": "क्रिसमस तक कितने दिन? क्रिसमस की उलटी गिनती",
+      "description": "एक लाइव उलटी गिनती टाइमर जो क्रिसमस दिवस तक बचे सटीक दिनों, घंटों, मिनटों और सेकंडों को ट्रैक करता है।",
+      "quick_answer": "{date} को क्रिसमस होने में ठीक {days} दिन बचे हैं।",
+      "summary": "क्रिसमस ईसा मसीह के जन्म की याद में मनाया जाने वाला एक वार्षिक त्योहार है, जिसे मुख्य रूप से 25 दिसंबर को दुनिया भर के अरबों लोगों के बीच एक धार्मिक और सांस्कृतिक उत्सव के रूप में मनाया जाता है।",
+      "history": "आधुनिक क्रिसमस परंपराएं विभिन्न धार्मिक और धर्मनिरपेक्ष मूल से विकसित हुईं, जिनमें ईसा मसीह का जन्म और शीतकालीन संक्रांति उत्सव शामिल हैं।",
+      "why_people_search": "लोग छुट्टियों की सभाओं, यात्रा, खरीदारी की योजना बनाने और साल के सबसे बड़े उत्सव के मौसम के लिए उत्साह जगाने के लिए क्रिसमस की उलटी गिनती खोजते हैं।"
+    },
+    "zh": {
+      "title": "距离圣诞节还有多少天？圣诞节倒计时",
+      "description": "实时倒计时计时器，精确追踪距离圣诞节还有多少天、小时、分钟和秒。",
+      "quick_answer": "距离 {date} 的圣诞节还有整整 {days} 天。",
+      "summary": "圣诞节是纪念耶稣基督诞生的年度节日，主要在 12 月 25 日举行，是全球数十亿人的宗教和文化庆典。",
+      "history": "现代圣诞节传统由各种宗教和世俗起源演变而来，包括耶稣降生和冬至节日。19 世纪，它在许多国家成为公共假期。",
+      "why_people_search": "人们搜索圣诞节倒计时来计划节日聚会、旅行、购物，并为一年中最重大的节日场景营造兴奋感。"
+    }
+  },
+  "spring": {
+    "en": {
+      "summary": "Spring is the season of new beginnings. It is the time when flowers bloom and trees start to grow.",
+      "history": "Spring's arrival is marked by the spring equinox (around March 20-21), when day and night are of approximately equal length.",
+      "why_people_search": "Gardeners and nature lovers track the spring countdown to know when to start planting and to anticipate the return of warmer, brighter days."
+    }
+  },
+  "ramadan": {
+    "en": {
+      "summary": "Ramadan is the ninth month of the Islamic calendar, observed by Muslims worldwide as a month of fasting, prayer, and reflection.",
+      "history": "The month commemorates the first revelation of the Quran to Prophet Muhammad. It is one of the Five Pillars of Islam.",
+      "why_people_search": "Because the Islamic calendar is lunar, the dates of Ramadan change every year. People search for the countdown to prepare for fasting and religious observances."
+    },
+    "ar": {
+      "name": "شهر رمضان",
+      "summary": "الشهر التاسع في التقويم الهجري، يصومه المسلمون في جميع أنحاء العالم كشهر للصيام والصلاة والتفكر.",
+      "history": "يمثل شهر رمضان الشهر الذي أنزل فيه القرآن لأول مرة على النبي محمد صلى الله عليه وسلم.",
+      "why_people_search": "بما أن التقويم الهجري قمري، فإن تواريخ رمضان تتغير كل عام، لذا يبحث الناس عن العداد للتجهيز للصيام."
+    }
+  },
+  "eid-al-fitr": {
+    "en": {
+      "summary": "Eid al-Fitr is the 'Festival of Breaking the Fast', a religious holiday celebrated by Muslims worldwide that marks the end of the month-long dawn-to-sunset fasting of Ramadan.",
+      "history": "It was originated by the Islamic prophet Muhammad. Certain traditions say these festivals were initiated in Medina after the migration of Muhammad from Mecca.",
+      "why_people_search": "As the date depends on the sighting of the moon, the countdown helps the community prepare for the grand three-day celebration."
+    },
+    "ar": {
+      "name": "عيد الفطر",
+      "summary": "عيد الإفطار هو مناسبة دينية يحتفل بها المسلمون في جميع أنحاء العالم وتمثل نهاية صيام شهر رمضان.",
+      "history": "بدأ الاحتفال به في عهد النبي محمد صلى الله عليه وسلم بعد الهجرة إلى المدينة المنورة.",
+      "why_people_search": "بما أن الموعد يعتمد على رؤية الهلال، فإن العداد يساعد المجتمع على الاستعداد للاحتفال الكبير."
+    }
+  },
+  "eid-al-adha": {
+    "en": {
+      "summary": "Eid al-Adha or the Feast of Sacrifice is the second of the two main Islamic holidays celebrated worldwide each year.",
+      "history": "It honors the willingness of Ibrahim to sacrifice his son Ismael as an act of obedience to God's command.",
+      "why_people_search": "People track this countdown to plan for the Hajj pilgrimage season and the traditional sharing of food with the community."
+    }
+  },
+  "easter": {
+    "en": {
+      "summary": "Easter, also called Pascha or Resurrection Sunday, is a Christian festival and cultural holiday commemorating the resurrection of Jesus from the dead.",
+      "history": "The date of Easter is variable and is calculated based on the first full moon after the vernal equinox.",
+      "why_people_search": "Since the date changes annually, families and travelers need the countdown to schedule school holidays and traditional Easter egg hunts."
+    }
+  },
+  "black-friday": {
+    "en": {
+      "summary": "Black Friday is a colloquial term for the Friday following Thanksgiving Day in the United States, which has been regarded as the beginning of the Christmas shopping season.",
+      "history": "Historically, it was the day retailers traditionally moved from 'the red' (losses) to 'the black' (profit).",
+      "why_people_search": "Shoppers search for this countdown to stay updated on early deals, store opening times, and online sales events."
+    }
+  },
+  "cyber-monday": {
+    "en": {
+      "summary": "Cyber Monday is a marketing term for the Monday after the Thanksgiving holiday in the United States, encouraging people to shop online.",
+      "history": "It was created by marketing companies to encourage people to shop online, especially after the physical shopping frenzy of Black Friday.",
+      "why_people_search": "Digital consumers track this countdown to access exclusive online-only discounts and tech deals."
+    }
+  },
+  "thanksgiving": {
+    "en": {
+      "summary": "Thanksgiving is a national holiday in the United States, celebrated on the fourth Thursday of November.",
+      "history": "It began as a day of giving thanks for the blessing of the harvest and of the preceding year.",
+      "why_people_search": "Families use the countdown to coordinate travel, host dinner parties, and prepare for the traditional turkey feast."
+    }
+  },
+  "diwali": {
+    "en": {
+      "summary": "Diwali is the Hindu festival of lights with its variations also celebrated in other Indian religions. It symbolizes the spiritual 'victory of light over darkness'.",
+      "history": "Deepavali is a festival that lasts for five days and is celebrated during the Hindu lunisolar month Kartika. It is one of the most popular festivals of Hinduism.",
+      "why_people_search": "The dates of Diwali vary annually; the countdown is essential for planning home decorations, firework displays, and gift exchanges."
+    }
+  },
+  "chinese-new-year": {
+    "en": {
+      "summary": "Chinese New Year, also known as the Lunar New Year or Spring Festival, is the festival that celebrates the beginning of a new year on the traditional lunisolar Chinese calendar.",
+      "history": "It is one of the most important holidays in China and among Chinese communities worldwide, with traditions like red envelopes and dragon dances.",
+      "why_people_search": "As it follows the lunar calendar, the date changes every year. People search for the countdown to plan family reunions and cultural celebrations."
+    }
+  },
+  "mothers-day": {
+    "en": {
+      "summary": "Mother's Day is a celebration honoring the mother of the family or individual, as well as motherhood, maternal bonds, and the influence of mothers in society.",
+      "history": "The modern holiday was first celebrated in 1907 when Anna Jarvis held a memorial for her mother at St Andrew's Methodist Church in Grafton, West Virginia.",
+      "why_people_search": "People search for the countdown to ensure they have enough time to buy gifts, send cards, and arrange special treats for their mothers."
+    }
+  },
+  "fathers-day": {
+    "en": {
+      "summary": "Father's Day is a holiday of honoring fatherhood and paternal bonds, as well as the influence of fathers in society.",
+      "history": "It was first proposed in the early 20th century to complement Mother's Day, becoming an official US holiday in 1972.",
+      "why_people_search": "Like Mother's Day, the countdown helps children and spouses plan celebrations and gifts for the fathers in their lives."
+    }
+  },
+  "us-independence-day": {
+    "en": {
+      "name": "US Independence Day",
+      "summary": "Independence Day, also known as the Fourth of July, is a federal holiday in the United States commemorating the Declaration of Independence of the United States, on July 4, 1776.",
+      "history": "The Continental Congress declared that the thirteen American colonies were no longer subject to the monarch of Britain and were now united, free, and independent states.",
+      "why_people_search": "Americans search for this countdown to plan for parades, family reunions, and festive fireworks displays across the country."
+    },
+    "ar": {
+      "name": "عيد الاستقلال الأمريكي",
+      "summary": "عيد الاستقلال، المعروف أيضاً باسم الرابع من يوليو، هو عطلة رسمية في الولايات المتحدة تخلد ذكرى إعلان الاستقلال في 4 يوليو 1776.",
+      "history": "أعلن الكونغرس القاري أن المستعمرات الأمريكية الثلاث عشرة لم تعد خاضعة لملك بريطانيا وأصبحت الآن ولايات متحدة وحرة ومستقلة.",
+      "why_people_search": "يبحث الأمريكيون عن العداد للتجهيز للمسيرات، والتجمعات العائلية، وعروض الألعاب النارية الاحتفالية."
+    }
+  },
+  "sa-national-day": {
+    "en": {
+      "name": "Saudi National Day",
+      "summary": "Saudi National Day is celebrated every September 23 to commemorate the renaming of the Kingdom of Nejd and Hejaz to the Kingdom of Saudi Arabia in 1932.",
+      "history": "It marks the unification of the Kingdom of Saudi Arabia by King Abdulaziz Al Saud.",
+      "why_people_search": "Saudis track the countdown to participate in grand national celebrations, light shows, and patriotic events."
+    },
+    "ar": {
+      "name": "اليوم الوطني السعودي",
+      "summary": "يتم الاحتفال باليوم الوطني السعودي في 23 سبتمبر من كل عام تخليداً لذكرى تحويل اسم مملكة نجد والحجاز إلى المملكة العربية السعودية عام 1932.",
+      "history": "يمثل يوم توحيد المملكة العربية السعودية على يد الملك عبد العزيز آل سعود طيب الله ثراه.",
+      "why_people_search": "يتابع السعوديون العداد للمشاركة في الاحتفالات الوطنية الكبرى، وعروض الضوء، والفعاليات الوطنية."
+    }
+  },
+  "sa-founding-day": {
+    "en": {
+      "name": "Saudi Founding Day",
+      "summary": "Saudi Founding Day is an annual celebration of the establishment of the first Saudi state by Imam Muhammad bin Saud in 1727.",
+      "history": "Recognized as a holiday in 2022, it honors the three centuries of history within the Arabian Peninsula.",
+      "why_people_search": "Citizens follow the countdown to engage with historical exhibitions and cultural events reflecting Saudi heritage."
+    },
+    "ar": {
+      "name": "يوم التأسيس السعودي",
+      "summary": "يوم التأسيس السعودي هو احتفال سنوي بذكرى تأسيس الدولة السعودية الأولى على يد الإمام محمد بن سعود عام 1727م.",
+      "history": "تم إقراره كإجازة رسمية في عام 2022، وهو يكرم ثلاثة قرون من التاريخ داخل الجزيرة العربية.",
+      "why_people_search": "يتابع المواطنون العداد للمشاركة في المعارض التاريخية والفعاليات الثقافية التي تعكس التراث السعودي."
+    }
+  },
+  "fr-bastille-day": {
+    "en": {
+      "name": "Bastille Day",
+      "summary": "Bastille Day is the common name given in English-speaking countries to the national day of France, celebrated on 14 July each year.",
+      "history": "It commemorates the Storming of the Bastille on 14 July 1789, a turning point of the French Revolution.",
+      "why_people_search": "People in France and fans of French culture track this countdown for the famous military parade on the Champs-Élysées and evening fireworks."
+    },
+    "ar": {
+      "name": "يوم الباستيل",
+      "summary": "يوم الباستيل هو الاسم الشائع في الدول الناطقة بالإنجليزية للعيد الوطني الفرنسي، الذي يتم الاحتفال به في 14 يوليو من كل عام.",
+      "history": "يخلد ذكرى اقتحام سجن الباستيل في 14 يوليو 1789، وهو نقطة تحول في الثورة الفرنسية.",
+      "why_people_search": "يتابع الناس العداد لمشاهدة العرض العسكري الشهير في الشانزلزيه وعروض الألعاب النارية المسائية."
+    }
+  },
+  "de-unity-day": {
+    "en": {
+      "name": "German Unity Day",
+      "summary": "German Unity Day is the national day of Germany, celebrated on 3 October as a public holiday.",
+      "history": "It commemorates the German reunification in 1990 when the German Democratic Republic (East Germany) joined the Federal Republic of Germany.",
+      "why_people_search": "Germans use the countdown to plan for regional festivals and the official central celebration which shifts to a different city each year."
+    },
+    "ar": {
+      "name": "يوم الوحدة الألماني",
+      "summary": "يوم الوحدة الألماني هو العيد الوطني لألمانيا، ويتم الاحتفال به في 3 أكتوبر كعطلة رسمية.",
+      "history": "يخلد ذكرى إعادة توحيد ألمانيا عام 1990 عندما انضمت جمهورية ألمانيا الديمقراطية (ألمانيا الشرقية) إلى جمهورية ألمانيا الاتحادية.",
+      "why_people_search": "يستخدم الألمان العداد للتخطيط للمهرجانات الإقليمية والاحتفال الرسمي المركزي الذي ينتقل إلى مدينة مختلفة كل عام."
+    }
+  },
+  "in-independence-day": {
+    "en": {
+      "name": "Indian Independence Day",
+      "summary": "Independence Day is celebrated annually on 15 August as a public holiday in India commemorating the nation's independence from the United Kingdom.",
+      "history": "On 15 August 1947, India became independent, and the first Prime Minister, Jawaharlal Nehru, raised the Indian national flag above the Lahori Gate of the Red Fort in Delhi.",
+      "why_people_search": "Indians search for the countdown to prepare for flag-hoisting ceremonies, cultural programs, and kite-flying traditions."
+    },
+    "ar": {
+      "name": "عيد الاستقلال الهندي",
+      "summary": "يتم الاحتفال بعيد الاستقلال سنوياً في 15 أغسطس كعطلة رسمية في الهند تخليداً لذكرى استقلال الأمة عن المملكة المتحدة.",
+      "history": "في 15 أغسطس 1947، نالت الهند استقلالها، ورفع أول رئيس وزراء، جواهر لال نهرو، العلم الوطني الهندي فوق بوابة لاهوري في القلعة الحمراء في دلهي.",
+      "why_people_search": "يبحث الهنود عن العداد للتجهيز لمراسم رفع العلم والبرامج الثقافية وتقاليد طيران الطائرات الورقية."
+    }
+  },
+  "in-republic-day": {
+    "en": {
+      "name": "Indian Republic Day",
+      "summary": "Republic Day is a national holiday in India commemorating the adoption of the Constitution of India on 1 Jan 1950.",
+      "history": "The Constitution was adopted by the Indian Constituent Assembly on 26 November 1949 and came into effect on 26 January 1950 with a democratic government system.",
+      "why_people_search": "Citizens follow the countdown to witness the grand Republic Day Parade in New Delhi, showcasing India's defense capability and cultural diversity."
+    },
+    "ar": {
+      "name": "يوم الجمهورية الهندي",
+      "summary": "يوم الجمهورية هو عطلة وطنية في الهند تخلد ذكرى اعتماد دستور الهند.",
+      "history": "اعتمدت الجمعية التأسيسية الهندية الدستور في 26 نوفمبر 1949 ودخل حيز التنفيذ في 26 يناير 1950 مع نظام حكم ديمقراطي.",
+      "why_people_search": "يتابع المواطنون العداد لمشاهدة عرض يوم الجمهورية الكبير في نيودلهي، والذي يستعرض القدرات الدفاعية والتنوع الثقافي للهند."
+    }
+  },
+  "thanksgiving-us": {
+    "en": {
+      "name": "Thanksgiving",
+      "summary": "Thanksgiving is a national holiday in the United States, celebrated on the fourth Thursday of November.",
+      "history": "It originated as a harvest festival. The event that Americans commonly call the 'First Thanksgiving' was celebrated by the Pilgrims after their first harvest in the New World in October 1621.",
+      "why_people_search": "It is one of the busiest travel times of the year, and families use the countdown to coordinate dinners and pre-holiday shopping (Black Friday)."
+    },
+    "ar": {
+      "name": "عيد الشكر",
+      "summary": "عيد الشكر هو عطلة وطنية في الولايات المتحدة، يتم الاحتفال به في الخميس الرابع من شهر نوفمبر.",
+      "history": "نشأ كمهرجان للحصاد. ما يسميه الأمريكيون عادة 'عيد الشكر الأول' احتفل به المهاجرون (الحجاج) بعد حصادهم الأول في العالم الجديد في أكتوبر 1621.",
+      "why_people_search": "يعد من أكثر أوقات السفر ازدحاماً في العام، وتستخدم العائلات العداد لتنسيق العشاء والتسوق قبل العطلة (الجمعة السوداء)."
+    }
+  }
+}

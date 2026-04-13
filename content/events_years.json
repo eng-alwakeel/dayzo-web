@@ -1,0 +1,58 @@
+[
+  {
+    "slug": "2026",
+    "name_key": "events.year_2026",
+    "month": 1,
+    "day": 1,
+    "type": "year",
+    "year_offset": 2026
+  },
+  {
+    "slug": "2027",
+    "name_key": "events.year_2027",
+    "month": 1,
+    "day": 1,
+    "type": "year",
+    "year_offset": 2027
+  },
+  {
+    "slug": "2028",
+    "name_key": "events.year_2028",
+    "month": 1,
+    "day": 1,
+    "type": "year",
+    "year_offset": 2028
+  },
+  {
+    "slug": "2029",
+    "name_key": "events.year_2029",
+    "month": 1,
+    "day": 1,
+    "type": "year",
+    "year_offset": 2029
+  },
+  {
+    "slug": "2030",
+    "name_key": "events.year_2030",
+    "month": 1,
+    "day": 1,
+    "type": "year",
+    "year_offset": 2030
+  },
+  {
+    "slug": "2040",
+    "name_key": "events.year_2040",
+    "month": 1,
+    "day": 1,
+    "type": "year",
+    "year_offset": 2040
+  },
+  {
+    "slug": "2050",
+    "name_key": "events.year_2050",
+    "month": 1,
+    "day": 1,
+    "type": "year",
+    "year_offset": 2050
+  }
+]

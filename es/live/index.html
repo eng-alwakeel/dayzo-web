@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo En Vivo - Dayzo</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dayzo.com/es/live/">
+    <meta property="og:title" content="Dayzo Live">
+    <meta property="og:description" content="Generate and share your own live countdowns beautifully.">
+    <link rel="canonical" href="https://dayzo.com/es/live/">
+    <link rel="alternate" hreflang="en" href="https://dayzo.com/en/live/">
+    <link rel="alternate" hreflang="es" href="https://dayzo.com/es/live/">
+    <link rel="alternate" hreflang="pt" href="https://dayzo.com/pt/live/">
+    <link rel="alternate" hreflang="fr" href="https://dayzo.com/fr/live/">
+    <link rel="alternate" hreflang="de" href="https://dayzo.com/de/live/">
+    <link rel="alternate" hreflang="ar" href="https://dayzo.com/ar/live/">
+    <link rel="alternate" hreflang="hi" href="https://dayzo.com/hi/live/">
+    <link rel="alternate" hreflang="id" href="https://dayzo.com/id/live/">
+    <link rel="alternate" hreflang="zh" href="https://dayzo.com/zh/live/">
+    <link rel="alternate" hreflang="x-default" href="https://dayzo.com/en/live/">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/base.css">
+    
+    <link rel="stylesheet" href="/css/live.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.0/build/qrcode.min.js"></script>
+    <script type="module" src="/js/core/theme.js"></script>
+    <script type="module" src="/js/core/lang-switcher.js"></script>
+</head>
+<body class="mode-live">
+    <div class="live-background" id="live-bg"></div>
+    <div class="live-overlay"></div>
+    <div class="live-container">
+        <header class="live-header">
+            <div class="live-brand">Dayzo <span>LIVE</span></div>
+        </header>
+        <main class="live-content">
+            <h1 class="live-title" id="live-title" data-i18n="ui.loading">Loading...</h1>
+            <div class="live-countdown-wrap" id="live-countdown-wrap">
+                <div class="live-segment"><span class="live-num" id="live-days">00</span><span class="live-label" data-i18n="ui.days">Días</span></div>
+                <div class="live-segment"><span class="live-num" id="live-hours">00</span><span class="live-label" data-i18n="ui.hours">Horas</span></div>
+                <div class="live-segment"><span class="live-num" id="live-minutes">00</span><span class="live-label" data-i18n="ui.minutes">Minutos</span></div>
+                <div class="live-segment"><span class="live-num" id="live-seconds">00</span><span class="live-label" data-i18n="ui.seconds">Segundos</span></div>
+            </div>
+            <div class="live-final-10" id="live-final-10" style="display:none;">
+                <span class="live-final-num" id="live-final-num">10</span>
+            </div>
+            <div class="live-finished-text" id="live-finished-text" style="display:none;" data-i18n="ui.its_live">¡Está en vivo!</div>
+            <a href="#" class="btn btn-primary" id="live-cta-btn" style="display:none; margin-top:24px; font-size:1.25rem;">CTA</a>
+            <div id="live-video" class="live-video-embed" style="display:none;"></div>
+        </main>
+        <footer class="live-footer">
+            <div class="live-actions">
+                <a href="/es/create-live" class="btn btn-secondary" data-i18n="ui.create_live">Crear Directo</a>
+                <a href="#" id="live-to-tv-btn" class="btn btn-secondary" data-i18n="ui.tv_mode">📺 Modo TV</a>
+            </div>
+             <div class="live-qr-box">
+                <canvas id="live-qr-canvas" width="60" height="60"></canvas>
+                <div class="live-qr-label">
+                  <span data-i18n="ui.qr_placeholder">Escanear para ver en el móvil</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="/js/pages/live.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+[
+  {
+    "slug": "new-year",
+    "name": "New Year",
+    "type": "fixed",
+    "month": 1,
+    "day": 1,
+    "category": "holiday",
+    "name_key": "events.new_year"
+  },
+  {
+    "slug": "valentines-day",
+    "name": "Valentine's Day",
+    "type": "fixed",
+    "month": 2,
+    "day": 14,
+    "category": "holiday",
+    "name_key": "events.valentines_day"
+  },
+  {
+    "slug": "earth-day",
+    "name": "Earth Day",
+    "type": "fixed",
+    "month": 4,
+    "day": 22,
+    "category": "event",
+    "name_key": "events.earth_day"
+  },
+  {
+    "slug": "summer",
+    "name": "Summer",
+    "type": "fixed",
+    "month": 6,
+    "day": 21,
+    "category": "season",
+    "name_key": "events.summer"
+  },
+  {
+    "slug": "autumn",
+    "name": "Autumn",
+    "type": "fixed",
+    "month": 9,
+    "day": 23,
+    "category": "season",
+    "name_key": "events.autumn"
+  },
+  {
+    "slug": "halloween",
+    "name": "Halloween",
+    "type": "fixed",
+    "month": 10,
+    "day": 31,
+    "category": "holiday",
+    "name_key": "events.halloween"
+  },
+  {
+    "slug": "winter",
+    "name": "Winter",
+    "type": "fixed",
+    "month": 12,
+    "day": 21,
+    "category": "season",
+    "name_key": "events.winter"
+  },
+  {
+    "slug": "christmas",
+    "name": "Christmas",
+    "type": "fixed",
+    "month": 12,
+    "day": 25,
+    "category": "holiday",
+    "name_key": "events.christmas"
+  },
+  {
+    "slug": "spring",
+    "name": "Spring",
+    "type": "fixed",
+    "month": 3,
+    "day": 21,
+    "category": "season",
+    "name_key": "events.spring"
+  }
+]

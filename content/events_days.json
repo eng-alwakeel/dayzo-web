@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "monday",
+    "name_key": "events.monday",
+    "day_of_week": 1,
+    "type": "day"
+  },
+  {
+    "slug": "tuesday",
+    "name_key": "events.tuesday",
+    "day_of_week": 2,
+    "type": "day"
+  },
+  {
+    "slug": "wednesday",
+    "name_key": "events.wednesday",
+    "day_of_week": 3,
+    "type": "day"
+  },
+  {
+    "slug": "thursday",
+    "name_key": "events.thursday",
+    "day_of_week": 4,
+    "type": "day"
+  },
+  {
+    "slug": "friday",
+    "name_key": "events.friday",
+    "day_of_week": 5,
+    "type": "day"
+  },
+  {
+    "slug": "saturday",
+    "name_key": "events.saturday",
+    "day_of_week": 6,
+    "type": "day"
+  },
+  {
+    "slug": "sunday",
+    "name_key": "events.sunday",
+    "day_of_week": 0,
+    "type": "day"
+  },
+  {
+    "slug": "weekend",
+    "name_key": "events.weekend",
+    "day_of_week": 6,
+    "type": "day"
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "ZZ": [
+    "new-year",
+    "valentines-day",
+    "halloween",
+    "christmas",
+    "new-years-eve",
+    "black-friday"
+  ],
+  "US": [
+    "us-independence-day",
+    "thanksgiving-us",
+    "halloween",
+    "black-friday",
+    "christmas"
+  ],
+  "SA": [
+    "sa-founding-day",
+    "sa-national-day",
+    "ramadan",
+    "eid-al-fitr",
+    "eid-al-adha"
+  ],
+  "FR": [
+    "fr-bastille-day",
+    "new-year",
+    "valentines-day",
+    "easter",
+    "christmas"
+  ],
+  "DE": [
+    "de-unity-day",
+    "easter",
+    "halloween",
+    "christmas",
+    "new-years-eve"
+  ],
+  "IN": [
+    "in-republic-day",
+    "in-independence-day",
+    "new-year",
+    "valentines-day",
+    "eid-al-fitr"
+  ]
+}

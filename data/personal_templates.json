@@ -1,0 +1,114 @@
+[
+  {
+    "id": "birthday-purple-glow",
+    "eventType": "birthday",
+    "name_key": "personal_templates.birthday.name",
+    "desc_key": "personal_templates.birthday.desc",
+    "thumbnail": "/images/templates/birthday_thumb.png",
+    "layout": "hero-countdown-message",
+    "customizableFields": [
+      "title", "personName", "eventDate", "message", "colorTheme", "backgroundImage", "logo", "cta", "video", "font", "qrVisible", "sizes"
+    ],
+    "rules": {
+      "qrVisible": false
+    }
+  },
+  {
+    "id": "anniversary-gold-rose",
+    "eventType": "anniversary",
+    "name_key": "personal_templates.anniversary.name",
+    "desc_key": "personal_templates.anniversary.desc",
+    "thumbnail": "/images/templates/anniversary_thumb.png",
+    "layout": "hero-countdown-message",
+    "customizableFields": [
+      "title", "personName", "eventDate", "message", "colorTheme", "backgroundImage", "logo", "cta", "video", "font", "qrVisible", "sizes"
+    ],
+    "rules": {
+      "qrVisible": false
+    }
+  },
+  {
+    "id": "graduation-modern-vibe",
+    "eventType": "graduation",
+    "name_key": "personal_templates.graduation.name",
+    "desc_key": "personal_templates.graduation.desc",
+    "thumbnail": "/images/templates/graduation_thumb.png",
+    "layout": "hero-countdown-message",
+    "customizableFields": [
+      "title", "personName", "eventDate", "message", "colorTheme", "backgroundImage", "logo", "cta", "video", "font", "qrVisible", "sizes"
+    ],
+    "rules": {
+      "qrVisible": false
+    }
+  },
+  {
+    "id": "engagement-sparkle",
+    "eventType": "engagement",
+    "name_key": "personal_templates.engagement.name",
+    "desc_key": "personal_templates.engagement.desc",
+    "thumbnail": "/images/templates/engagement_thumb.png",
+    "layout": "hero-countdown-message",
+    "customizableFields": [
+      "title", "personName", "eventDate", "message", "colorTheme", "backgroundImage", "logo", "cta", "video", "font", "qrVisible", "sizes"
+    ],
+    "rules": {
+      "qrVisible": false
+    }
+  },
+  {
+    "id": "new-baby-joy",
+    "eventType": "new_baby",
+    "name_key": "personal_templates.new_baby.name",
+    "desc_key": "personal_templates.new_baby.desc",
+    "thumbnail": "/images/templates/baby_thumb.png",
+    "layout": "hero-countdown-message",
+    "customizableFields": [
+      "title", "personName", "eventDate", "message", "colorTheme", "backgroundImage", "logo", "cta", "video", "font", "qrVisible", "sizes"
+    ],
+    "rules": {
+      "qrVisible": false
+    }
+  },
+  {
+    "id": "surprise-party-mystery",
+    "eventType": "surprise_party",
+    "name_key": "personal_templates.surprise_party.name",
+    "desc_key": "personal_templates.surprise_party.desc",
+    "thumbnail": "/images/templates/party_thumb.png",
+    "layout": "hero-countdown-message",
+    "customizableFields": [
+      "title", "personName", "eventDate", "message", "colorTheme", "backgroundImage", "logo", "cta", "video", "font", "qrVisible", "sizes"
+    ],
+    "rules": {
+      "qrVisible": false
+    }
+  },
+  {
+    "id": "family-gathering-cozy",
+    "eventType": "family_gathering",
+    "name_key": "personal_templates.family_gathering.name",
+    "desc_key": "personal_templates.family_gathering.desc",
+    "thumbnail": "/images/templates/family_thumb.png",
+    "layout": "hero-countdown-message",
+    "customizableFields": [
+      "title", "personName", "eventDate", "message", "colorTheme", "backgroundImage", "logo", "cta", "video", "font", "qrVisible", "sizes"
+    ],
+    "rules": {
+      "qrVisible": false
+    }
+  },
+  {
+    "id": "personal-celebration-star",
+    "eventType": "personal_celebration",
+    "name_key": "personal_templates.personal_celebration.name",
+    "desc_key": "personal_templates.personal_celebration.desc",
+    "thumbnail": "/images/templates/celebration_thumb.png",
+    "layout": "hero-countdown-message",
+    "customizableFields": [
+      "title", "personName", "eventDate", "message", "colorTheme", "backgroundImage", "logo", "cta", "video", "font", "qrVisible", "sizes"
+    ],
+    "rules": {
+      "qrVisible": false
+    }
+  }
+]

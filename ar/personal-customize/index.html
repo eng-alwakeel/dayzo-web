@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خصّص احتفالك - Dayzo</title>
+    <link rel="canonical" href="https://dayzo.com/ar/personal-customize/">
+    <link rel="alternate" hreflang="en" href="https://dayzo.com/en/personal-customize/">
+    <link rel="alternate" hreflang="es" href="https://dayzo.com/es/personal-customize/">
+    <link rel="alternate" hreflang="pt" href="https://dayzo.com/pt/personal-customize/">
+    <link rel="alternate" hreflang="fr" href="https://dayzo.com/fr/personal-customize/">
+    <link rel="alternate" hreflang="de" href="https://dayzo.com/de/personal-customize/">
+    <link rel="alternate" hreflang="ar" href="https://dayzo.com/ar/personal-customize/">
+    <link rel="alternate" hreflang="hi" href="https://dayzo.com/hi/personal-customize/">
+    <link rel="alternate" hreflang="id" href="https://dayzo.com/id/personal-customize/">
+    <link rel="alternate" hreflang="zh" href="https://dayzo.com/zh/personal-customize/">
+    <link rel="alternate" hreflang="x-default" href="https://dayzo.com/en/personal-customize/">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/rtl.css">
+    <link rel="stylesheet" href="/css/create-live.css">
+    <script type="module" src="/js/core/theme.js"></script>
+    <script type="module" src="/js/core/lang-switcher.js"></script>
+</head>
+<body>
+    <header class="brand-header">
+        <a href="/ar/" class="brand-logo">Dayzo</a>
+        <div class="header-actions">
+            <select id="lang-switcher" class="lang-switcher"></select>
+            <button id="theme-toggle" class="theme-toggle-btn">☀️ / 🌙</button>
+        </div>
+    </header>
+    <main class="container">
+        <div class="create-form-container">
+            <h1 class="section-title" data-i18n="personal_custom.header">خصّص احتفالك</h1>
+            <p class="description-text" id="template-info-text">--</p>
+            
+            <form id="personal-customize-form">
+                <input type="hidden" id="p-template-id">
+                
+                <div class="form-group">
+                    <label class="form-label" data-i18n="personal_custom.title_label">عنوان الحدث (مثلاً: عيد ميلادي الـ٢٥)</label>
+                    <input type="text" id="p-title" class="form-input" placeholder="e.g. Happy Birthday Sarah">
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="personal_custom.name_label">بمن نحتفل؟</label>
+                        <input type="text" id="p-name" class="form-input" placeholder="e.g. Sarah">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="personal_custom.date_label">تاريخ ووقت الحدث</label>
+                        <input type="datetime-local" id="p-date" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" data-i18n="personal_custom.message_label">رسالتك الخاصة / أمنيتك</label>
+                    <textarea id="p-msg" class="form-input" rows="3" style="resize: vertical;"></textarea>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="personal_custom.photo_label">رابط الصورة (اختياري)</label>
+                        <input type="url" id="p-photo" class="form-input" placeholder="https://...">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="personal_custom.bg_label">رابط صورة الخلفية (اختياري)</label>
+                        <input type="url" id="p-bg" class="form-input" placeholder="https://...">
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_logo">رابط الشعار</label>
+                        <input type="url" id="p-logo" class="form-input" placeholder="https://...">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_color">اللون الرئيسي (Hex)</label>
+                        <input type="color" id="p-color" class="form-input" value="#7C3AED">
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_cta_text">نص الزر (CTA)</label>
+                        <input type="text" id="p-cta" class="form-input" placeholder="Buy Tickets">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_link">رابط الزر</label>
+                        <input type="url" id="p-link" class="form-input" placeholder="https://...">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" data-i18n="ui.form_video">رابط فيديو التضمين (يوتيوب)</label>
+                    <input type="url" id="p-video" class="form-input" placeholder="https://youtube.com/...">
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_text_color">لون النص</label>
+                        <input type="color" id="p-text-color" class="form-input" value="#FFFFFF">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_num_color">لون الأرقام</label>
+                        <input type="color" id="p-num-color" class="form-input" value="#7C3AED">
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_font_family">نوع الخط</label>
+                        <select id="p-font" class="form-input">
+                            <option value="var(--font-family-sans)" data-i18n="ui.font_modern">Modern</option>
+                            <option value="var(--font-family-serif)" data-i18n="ui.font_classic">Classic</option>
+                            <option value="'Tajawal', sans-serif" data-i18n="ui.font_arabic">Arabic</option>
+                            <option value="'Courier New', monospace" data-i18n="ui.font_digital">Digital</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_show_qr">إظهار رمز QR</label>
+                        <select id="p-qr" class="form-input">
+                            <option value="true" data-i18n="ui.yes" selected>Yes</option>
+                            <option value="false" data-i18n="ui.no">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_title_size">حجم خط العنوان (vh)</label>
+                        <input type="number" id="p-title-size" class="form-input" value="8" min="1" max="20">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_num_size">حجم الأرقام (vh)</label>
+                        <input type="number" id="p-num-size" class="form-input" value="12" min="1" max="30">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-full" data-i18n="personal_custom.btn_generate">أنشئ صفحتي</button>
+                </div>
+            </form>
+
+            <div class="preview-card" style="margin-top: 32px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-color); display: none;" id="personal-preview-container">
+                <h3 style="margin-bottom: 16px; font-size: 1rem; opacity: 0.7; text-transform: uppercase;" data-i18n="personal_custom.preview_title">معاينة القالب</h3>
+                <iframe id="preview-iframe" style="width: 100%; height: 500px; border: none; border-radius: var(--radius-md); background: #000;"></iframe>
+            </div>
+
+             <div class="result-section" id="result-section" style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 32px; display: none;">
+                <div class="generated-url-box" id="generated-url"></div>
+                <button id="btn-copy" class="btn btn-secondary btn-full" style="margin-top: 16px;" data-i18n="ui.copy">Copy Link</button>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="/js/pages/personal-customize.js"></script>
+</body>
+</html>

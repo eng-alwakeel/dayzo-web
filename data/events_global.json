@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "christmas",
+    "name_key": "events.christmas",
+    "month": 12,
+    "day": 25,
+    "type": "holiday"
+  },
+  {
+    "slug": "new-years-eve",
+    "name_key": "events.new_years_eve",
+    "month": 12,
+    "day": 31,
+    "type": "holiday"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "spring",
+    "name_key": "events.spring",
+    "month": 3,
+    "day": 20,
+    "type": "season"
+  },
+  {
+    "slug": "summer",
+    "name_key": "events.summer",
+    "month": 6,
+    "day": 21,
+    "type": "season"
+  },
+  {
+    "slug": "autumn",
+    "name_key": "events.autumn",
+    "month": 9,
+    "day": 22,
+    "type": "season"
+  },
+  {
+    "slug": "winter",
+    "name_key": "events.winter",
+    "month": 12,
+    "day": 21,
+    "type": "season"
+  }
+]

@@ -1,0 +1,64 @@
+[
+  {
+    "slug": "us-independence-day",
+    "name_key": "events.us_independence_day",
+    "month": 7,
+    "day": 4,
+    "type": "national"
+  },
+  {
+    "slug": "sa-national-day",
+    "name_key": "events.sa_national_day",
+    "month": 9,
+    "day": 23,
+    "type": "national"
+  },
+  {
+    "slug": "sa-founding-day",
+    "name_key": "events.sa_founding_day",
+    "month": 2,
+    "day": 22,
+    "type": "national"
+  },
+  {
+    "slug": "fr-bastille-day",
+    "name_key": "events.fr_bastille_day",
+    "month": 7,
+    "day": 14,
+    "type": "national"
+  },
+  {
+    "slug": "de-unity-day",
+    "name_key": "events.de_unity_day",
+    "month": 10,
+    "day": 3,
+    "type": "national"
+  },
+  {
+    "slug": "in-independence-day",
+    "name_key": "events.in_independence_day",
+    "month": 8,
+    "day": 15,
+    "type": "national"
+  },
+  {
+    "slug": "in-republic-day",
+    "name_key": "events.in_republic_day",
+    "month": 1,
+    "day": 26,
+    "type": "national"
+  },
+  {
+    "slug": "thanksgiving-us",
+    "name_key": "events.thanksgiving_us",
+    "rule": "fourth_thursday_november",
+    "fallback_dates": {
+      "2024": "2024-11-28T00:00:00Z",
+      "2025": "2025-11-27T00:00:00Z",
+      "2026": "2026-11-26T00:00:00Z",
+      "2027": "2027-11-25T00:00:00Z",
+      "2028": "2028-11-23T00:00:00Z"
+    },
+    "type": "national"
+  }
+]

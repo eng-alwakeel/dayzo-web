@@ -1,0 +1,102 @@
+{
+  "christmas": {
+    "summary": "Christmas is an annual festival commemorating the birth of Jesus Christ, observed primarily on December 25 as a religious and cultural celebration among billions of people around the world.",
+    "history": "Modern Christmas traditions evolved from various religious and secular origins, including the Nativity of Jesus and winter solstice festivals. It became a public holiday in many countries in the 19th century.",
+    "why_people_search": "People search for the Christmas countdown to plan holiday gatherings, travel, shopping, and to build excitement for one of the biggest festive seasons of the year."
+  },
+  "new-year": {
+    "summary": "New Year's Day is the first day of the year on the modern Gregorian calendar as well as the Julian calendar.",
+    "history": "In many countries, New Year's Day is celebrated with fireworks and other festivities at midnight as the new year begins in each time zone. It is a time for resolutions and new beginnings.",
+    "why_people_search": "People search for the New Year countdown to experience the exact moment of the transition into the next year, often as part of parties or midnight celebrations."
+  },
+  "valentines-day": {
+    "summary": "Valentine's Day, also called Saint Valentine's Day or the Feast of Saint Valentine, is celebrated annually on February 14.",
+    "history": "Originating as a Christian feast day honoring one or two early Christian martyrs named Saint Valentine, it has become a significant cultural celebration of romance and love.",
+    "why_people_search": "Countdowns to Valentine's Day are popular for planning romantic dinners, gift purchases, and ensuring special plans are made in time."
+  },
+  "halloween": {
+    "summary": "Halloween or Hallowe'en is a celebration observed in many countries on 31 October, the eve of the Western Christian feast of All Hallows' Day.",
+    "history": "It is widely believed that many Halloween traditions originated from ancient Celtic harvest festivals, particularly the Gaelic festival Samhain.",
+    "why_people_search": "Fans of spooky season search for this countdown to prepare costumes, decorate their homes, and plan themed parties well in advance."
+  },
+  "earth-day": {
+    "summary": "Earth Day is an annual event on April 22 to demonstrate support for environmental protection.",
+    "history": "First held on April 22, 1970, it now includes a wide range of events coordinated globally by Earthday.org including 1 billion people in more than 193 countries.",
+    "why_people_search": "Schools, organizations, and individuals use the countdown to coordinate environmental awareness campaigns and local cleanup events."
+  },
+  "summer": {
+    "summary": "Summer is the warmest of the four temperate seasons, falling between spring and autumn.",
+    "history": "Astronomically, the summer solstice (around June 21 in the Northern Hemisphere) marks the official start of summer, characterized by the longest day of the year.",
+    "why_people_search": "The countdown to summer is a major trend for students looking forward to school breaks and travelers planning their summer vacations."
+  },
+  "winter": {
+    "summary": "Winter is the coldest season of the year in polar and temperate climates, between autumn and spring.",
+    "history": "Winter begins at the winter solstice, which is the shortest day of the year. In the Northern Hemisphere, this usually occurs around December 21-22.",
+    "why_people_search": "People search for the winter countdown to prepare for colder weather, winter sports, and the distinctive cozy atmosphere of the season."
+  },
+  "spring": {
+    "summary": "Spring is the season of new beginnings. It is the time when flowers bloom and trees start to grow.",
+    "history": "Spring's arrival is marked by the spring equinox (around March 20-21), when day and night are of approximately equal length.",
+    "why_people_search": "Gardeners and nature lovers track the spring countdown to know when to start planting and to anticipate the return of warmer, brighter days."
+  },
+  "autumn": {
+    "summary": "Autumn, also known as fall, is the season when the duration of daylight becomes noticeably shorter and the temperature cools considerably.",
+    "history": "Autumn begins with the autumnal equinox (around September 22-23). It is traditionally associated with the harvest season in many cultures.",
+    "why_people_search": "People look forward to autumn for the changing colors of leaves, 'pumpkin spice' culture, and the relief from summer heat."
+  },
+  "ramadan": {
+    "summary": "Ramadan is the ninth month of the Islamic calendar, observed by Muslims worldwide as a month of fasting, prayer, and reflection.",
+    "history": "The month commemorates the first revelation of the Quran to Prophet Muhammad. It is one of the Five Pillars of Islam.",
+    "why_people_search": "Because the Islamic calendar is lunar, the dates of Ramadan change every year. People search for the countdown to prepare for fasting and religious observances."
+  },
+  "eid-al-fitr": {
+    "summary": "Eid al-Fitr is the 'Festival of Breaking the Fast', a religious holiday celebrated by Muslims worldwide that marks the end of the month-long dawn-to-sunset fasting of Ramadan.",
+    "history": "It was originated by the Islamic prophet Muhammad. Certain traditions say these festivals were initiated in Medina after the migration of Muhammad from Mecca.",
+    "why_people_search": "As the date depends on the sighting of the moon, the countdown helps the community prepare for the grand three-day celebration."
+  },
+  "eid-al-adha": {
+    "summary": "Eid al-Adha or the Feast of Sacrifice is the second of the two main Islamic holidays celebrated worldwide each year.",
+    "history": "It honors the willingness of Ibrahim to sacrifice his son Ismael as an act of obedience to God's command.",
+    "why_people_search": "People track this countdown to plan for the Hajj pilgrimage season and the traditional sharing of food with the community."
+  },
+  "easter": {
+    "summary": "Easter, also called Pascha or Resurrection Sunday, is a Christian festival and cultural holiday commemorating the resurrection of Jesus from the dead.",
+    "history": "The date of Easter is variable and is calculated based on the first full moon after the vernal equinox.",
+    "why_people_search": "Since the date changes annually, families and travelers need the countdown to schedule school holidays and traditional Easter egg hunts."
+  },
+  "black-friday": {
+    "summary": "Black Friday is a colloquial term for the Friday following Thanksgiving Day in the United States, which has been regarded as the beginning of the Christmas shopping season.",
+    "history": "Historically, it was the day retailers traditionally moved from 'the red' (losses) to 'the black' (profit).",
+    "why_people_search": "Shoppers search for this countdown to stay updated on early deals, store opening times, and online sales events."
+  },
+  "cyber-monday": {
+    "summary": "Cyber Monday is a marketing term for the Monday after the Thanksgiving holiday in the United States, encouraging people to shop online.",
+    "history": "It was created by marketing companies to encourage people to shop online, especially after the physical shopping frenzy of Black Friday.",
+    "why_people_search": "Digital consumers track this countdown to access exclusive online-only discounts and tech deals."
+  },
+  "thanksgiving": {
+    "summary": "Thanksgiving is a national holiday in the United States, celebrated on the fourth Thursday of November.",
+    "history": "It began as a day of giving thanks for the blessing of the harvest and of the preceding year.",
+    "why_people_search": "Families use the countdown to coordinate travel, host dinner parties, and prepare for the traditional turkey feast."
+  },
+  "diwali": {
+    "summary": "Diwali is the Hindu festival of lights with its variations also celebrated in other Indian religions. It symbolizes the spiritual 'victory of light over darkness'.",
+    "history": "Deepavali is a festival that lasts for five days and is celebrated during the Hindu lunisolar month Kartika. It is one of the most popular festivals of Hinduism.",
+    "why_people_search": "The dates of Diwali vary annually; the countdown is essential for planning home decorations, firework displays, and gift exchanges."
+  },
+  "chinese-new-year": {
+    "summary": "Chinese New Year, also known as the Lunar New Year or Spring Festival, is the festival that celebrates the beginning of a new year on the traditional lunisolar Chinese calendar.",
+    "history": "It is one of the most important holidays in China and among Chinese communities worldwide, with traditions like red envelopes and dragon dances.",
+    "why_people_search": "As it follows the lunar calendar, the date changes every year. People search for the countdown to plan family reunions and cultural celebrations."
+  },
+  "mothers-day": {
+    "summary": "Mother's Day is a celebration honoring the mother of the family or individual, as well as motherhood, maternal bonds, and the influence of mothers in society.",
+    "history": "The modern holiday was first celebrated in 1907 when Anna Jarvis held a memorial for her mother at St Andrew's Methodist Church in Grafton, West Virginia.",
+    "why_people_search": "People search for the countdown to ensure they have enough time to buy gifts, send cards, and arrange special treats for their mothers."
+  },
+  "fathers-day": {
+    "summary": "Father's Day is a holiday of honoring fatherhood and paternal bonds, as well as the influence of fathers in society.",
+    "history": "It was first proposed in the early 20th century to complement Mother's Day, becoming an official US holiday in 1972.",
+    "why_people_search": "Like Mother's Day, the countdown helps children and spouses plan celebrations and gifts for the fathers in their lives."
+  }
+}

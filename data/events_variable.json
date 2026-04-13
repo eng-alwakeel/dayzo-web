@@ -1,0 +1,12 @@
+[
+  {
+    "slug": "thanksgiving",
+    "name_key": "events.thanksgiving",
+    "rule": "fourth_thursday_november",
+    "fallback_dates": {
+      "2024": "2024-11-28",
+      "2025": "2025-11-27"
+    },
+    "type": "holiday"
+  }
+]

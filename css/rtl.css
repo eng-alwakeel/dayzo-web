@@ -1,0 +1,51 @@
+/* RTL rules applied when HTML dir="rtl" */
+
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="rtl"] body {
+  /* Using consistent Arabic font fallbacks */
+  font-family: 'Inter', 'Tajawal', 'Cairo', system-ui, sans-serif;
+}
+
+html[dir="rtl"] .enriched-content {
+  text-align: right;
+}
+
+html[dir="rtl"] .content-block .section-title {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+html[dir="rtl"] .share-row {
+  flex-direction: row-reverse;
+}
+
+/* Flip specific directional icons if used */
+html[dir="rtl"] .icon-forward {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] .live-header, 
+html[dir="rtl"] .live-footer {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .live-qr-box {
+  flex-direction: row; /* Keep image and text side-by-side naturally */
+}
+
+html[dir="rtl"] .tv-qr-region {
+  right: auto;
+  left: 4vh;
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .related-countdowns,
+html[dir="rtl"] .create-cta-card {
+  text-align: center; /* Always centered for these specific blocks */
+}
+
+html[dir="rtl"] .create-cta-card h2 {
+  letter-spacing: normal;
+}
