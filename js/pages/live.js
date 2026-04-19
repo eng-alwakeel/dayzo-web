@@ -237,6 +237,7 @@ window.addEventListener('message', (e) => {
     if (d.textColor) root.style.setProperty('--color-text', d.textColor);
     if (d.numColor) root.style.setProperty('--color-numbers', d.numColor);
     if (d.font) root.style.setProperty('--font-family-sans', d.font);
+    // Background
     const bgEl = document.getElementById('live-bg');
     if (bgEl) {
         if (d.gradient) {
@@ -245,7 +246,21 @@ window.addEventListener('message', (e) => {
         } else if (d.bg !== undefined) {
             bgEl.style.background = '';
             bgEl.style.backgroundImage = d.bg ? `url('${d.bg}')` : '';
+            bgEl.style.backgroundSize = 'cover';
+            bgEl.style.backgroundPosition = 'center';
         }
+    }
+    // Logo
+    if (d.logo !== undefined) {
+        let logoImg = document.getElementById('live-logo');
+        if (!logoImg) {
+            logoImg = document.createElement('img');
+            logoImg.id = 'live-logo';
+            logoImg.style.cssText = 'max-width:120px;max-height:60px;object-fit:contain;position:absolute;top:16px;right:16px;z-index:10;';
+            document.querySelector('.live-container')?.appendChild(logoImg);
+        }
+        logoImg.src = d.logo || '';
+        logoImg.style.display = d.logo ? 'block' : 'none';
     }
 });
 

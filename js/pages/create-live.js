@@ -5,8 +5,8 @@ let dictionary = {};
 let lang = 'en';
 let generateAndShow;
 let templateData = [];
-const IFRAME_W = 640;
-const IFRAME_H = 360;
+const IFRAME_W = 800;
+const IFRAME_H = 450;
 
 async function init() {
     lang = I18nLoader.applyLayoutDirection();
@@ -114,6 +114,8 @@ function setupForm() {
         if (!iframe?.contentWindow) return;
         const templateId = getV('c-template');
         const tmpl = getTemplateById(templateId);
+        const bgVal = getV('c-bg');
+        const logoVal = getV('c-logo');
         iframe.contentWindow.postMessage({
             type: 'DAYZO_PREVIEW',
             title: getV('c-title') || 'Countdown',
@@ -121,8 +123,9 @@ function setupForm() {
             textColor: getV('c-text-color') || '#FFFFFF',
             numColor: getV('c-num-color') || '#FFFFFF',
             font: getV('c-font'),
-            bg: getV('c-bg'),
-            gradient: (!getV('c-bg') && tmpl?.previewGradient) ? tmpl.previewGradient : null,
+            bg: bgVal,
+            logo: logoVal,
+            gradient: (!bgVal && tmpl?.previewGradient) ? tmpl.previewGradient : null,
         }, window.location.origin);
     };
 
@@ -156,8 +159,8 @@ function setupForm() {
 
     const form = document.getElementById('create-live-form');
 
-    // Structural changes (date/template) → full reload
-    const structuralIds = ['c-date', 'c-template'];
+    // Structural changes (date/template/bg/logo) → full reload
+    const structuralIds = ['c-date', 'c-template', 'c-bg', 'c-logo'];
     structuralIds.forEach(id => {
         document.getElementById(id)?.addEventListener('change', () => {
             setTimeout(() => generateAndShow(), 100);
