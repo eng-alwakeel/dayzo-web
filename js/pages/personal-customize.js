@@ -2,24 +2,38 @@ import { I18nLoader } from '../core/i18n.js';
 import { ThemeManager } from '../core/theme.js';
 
 let dictionary = {};
+let lang = 'en';
 let currentTemplate = null;
+let generateAndShow;
+
+const IFRAME_W = 800;
+const IFRAME_H = 450;
 
 async function init() {
-    const lang = I18nLoader.applyLayoutDirection();
+    lang = I18nLoader.applyLayoutDirection();
     dictionary = await I18nLoader.loadDictionary(lang);
-    
+
     translateDom();
     ThemeManager.bindToggleSwitch('theme-toggle', dictionary);
-    
-    // Get template ID from URL
+
     const params = new URLSearchParams(window.location.search);
     const templateId = params.get('id');
-    
     if (templateId) {
         await loadTemplateData(templateId);
     }
-    
+
     setupForm();
+    scalePreviewIframe();
+    window.addEventListener('resize', scalePreviewIframe);
+}
+
+function scalePreviewIframe() {
+    const wrap = document.getElementById('preview-wrap');
+    const iframe = document.getElementById('preview-iframe');
+    if (!wrap || !iframe) return;
+    const scale = wrap.clientWidth / IFRAME_W;
+    iframe.style.transform = `scale(${scale})`;
+    wrap.style.height = `${Math.round(IFRAME_H * scale)}px`;
 }
 
 async function loadTemplateData(id) {
@@ -27,27 +41,173 @@ async function loadTemplateData(id) {
         const req = await fetch('/data/personal_templates.json');
         const templates = await req.json();
         currentTemplate = templates.find(t => t.id === id);
-        
+
         if (currentTemplate) {
             document.getElementById('p-template-id').value = id;
             const name = I18nLoader.getSafeVal(currentTemplate.name_key, dictionary) || id;
             document.getElementById('template-info-text').textContent = name;
-            
-            // Pre-fill defaults from template
+
             if (currentTemplate.thumbnail) {
                 document.getElementById('p-bg').value = window.location.origin + currentTemplate.thumbnail;
             }
             if (currentTemplate.color) {
                 document.getElementById('p-color').value = currentTemplate.color;
+                document.getElementById('p-num-color').value = currentTemplate.color;
             }
             if (currentTemplate.rules && currentTemplate.rules.qrVisible === false) {
                 document.getElementById('p-qr').value = 'false';
             }
-            
-            // Trigger initial preview
-            updatePreview();
         }
     } catch(e) { console.error("Failed to load template", e); }
+}
+
+function getFormParams() {
+    const gv = id => document.getElementById(id)?.value?.trim() ?? '';
+    const params = new URLSearchParams();
+    const title = gv('p-title');
+    const name = gv('p-name');
+    const date = gv('p-date');
+    const msg = gv('p-msg');
+    const photo = gv('p-photo');
+    const bg = gv('p-bg');
+    const logo = gv('p-logo');
+    const color = gv('p-color');
+    const cta = gv('p-cta');
+    const link = gv('p-link');
+    const video = gv('p-video');
+    const textColor = gv('p-text-color');
+    const numColor = gv('p-num-color');
+    const font = gv('p-font');
+    const qr = gv('p-qr');
+    const titleSize = gv('p-title-size');
+    const numSize = gv('p-num-size');
+    const templateId = gv('p-template-id');
+
+    if (title) params.set('title', title);
+    if (name) params.set('name', name);
+    if (date) {
+        try { params.set('date', new Date(date).toISOString()); }
+        catch(e) { params.set('date', date); }
+    }
+    if (msg) params.set('msg', msg);
+    if (photo) params.set('photo', photo);
+    if (bg) params.set('bg', bg);
+    if (logo) params.set('logo', logo);
+    if (color) params.set('color', color);
+    if (cta) params.set('cta', cta);
+    if (link) params.set('link', link);
+    if (video) params.set('video', video);
+    if (textColor) params.set('textColor', textColor);
+    if (numColor) params.set('numColor', numColor);
+    if (font) params.set('font', font);
+    if (qr === 'false') params.set('qr', 'false');
+    if (titleSize && titleSize !== '8') params.set('titleSize', titleSize);
+    if (numSize && numSize !== '12') params.set('numSize', numSize);
+    if (templateId) params.set('template', templateId);
+
+    return params;
+}
+
+function getLiveUrl() {
+    return `${window.location.origin}/${lang}/live/?${getFormParams().toString()}`;
+}
+
+function sendPreviewMessage() {
+    const iframe = document.getElementById('preview-iframe');
+    if (!iframe?.contentWindow) return;
+    const gv = id => document.getElementById(id)?.value?.trim() ?? '';
+    iframe.contentWindow.postMessage({
+        type: 'DAYZO_PREVIEW',
+        title: gv('p-title') || 'Preview',
+        color: gv('p-color') || '#7C3AED',
+        textColor: gv('p-text-color') || '#FFFFFF',
+        numColor: gv('p-num-color') || '#7C3AED',
+        font: gv('p-font'),
+        bg: gv('p-bg'),
+        logo: gv('p-logo'),
+        gradient: (!gv('p-bg') && currentTemplate?.previewGradient) ? currentTemplate.previewGradient : null,
+    }, window.location.origin);
+}
+
+function setupForm() {
+    const form = document.getElementById('personal-customize-form');
+    const generatedUrlEl = document.getElementById('generated-url');
+    const resultSection = document.getElementById('result-section');
+    const btnPreview = document.getElementById('btn-preview');
+    const btnCopy = document.getElementById('btn-copy');
+    const btnTv = document.getElementById('btn-tv');
+
+    // Structural fields that require full iframe reload
+    const structuralIds = ['p-date', 'p-bg', 'p-template-id', 'p-photo', 'p-name', 'p-msg', 'p-cta', 'p-link', 'p-video', 'p-qr', 'p-title-size', 'p-num-size'];
+
+    generateAndShow = () => {
+        const finalUrl = getLiveUrl();
+        if (generatedUrlEl) generatedUrlEl.textContent = finalUrl;
+        if (resultSection) resultSection.classList.add('active');
+        if (btnTv) btnTv.href = finalUrl.replace(`/${lang}/live/`, `/${lang}/tv/`);
+
+        const placeholder = document.getElementById('preview-placeholder');
+        const iframe = document.getElementById('preview-iframe');
+        if (!iframe) return finalUrl;
+
+        if (iframe.dataset.lastUrl !== finalUrl) {
+            if (placeholder) placeholder.style.display = 'none';
+            iframe.style.display = 'block';
+            iframe.src = finalUrl;
+            iframe.dataset.lastUrl = finalUrl;
+            iframe.onload = () => {
+                setTimeout(sendPreviewMessage, 300);
+                scalePreviewIframe();
+            };
+        } else {
+            sendPreviewMessage();
+        }
+        return finalUrl;
+    };
+
+    // Auto-trigger preview on structural field changes
+    structuralIds.forEach(id => {
+        document.getElementById(id)?.addEventListener('change', () => {
+            setTimeout(() => generateAndShow(), 100);
+        });
+    });
+
+    let debounceTimer;
+    form.addEventListener('input', (evt) => {
+        const isStructural = structuralIds.includes(evt.target?.id);
+        clearTimeout(debounceTimer);
+        if (isStructural) {
+            debounceTimer = setTimeout(() => generateAndShow(), 200);
+        } else {
+            debounceTimer = setTimeout(() => sendPreviewMessage(), 150);
+        }
+    });
+
+    form.addEventListener('change', (evt) => {
+        const isStructural = structuralIds.includes(evt.target?.id);
+        if (!isStructural) {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => sendPreviewMessage(), 100);
+        }
+    });
+
+    btnPreview?.addEventListener('click', () => {
+        const url = generateAndShow();
+        window.open(url, '_blank');
+    });
+
+    btnCopy?.addEventListener('click', () => {
+        generateAndShow();
+        const url = getLiveUrl();
+        navigator.clipboard.writeText(url).then(() => {
+            const old = btnCopy.textContent;
+            btnCopy.textContent = '✓ Copied!';
+            setTimeout(() => btnCopy.textContent = old, 2000);
+        });
+    });
+
+    // Trigger initial preview once template data is ready
+    generateAndShow();
 }
 
 function translateDom() {
@@ -61,102 +221,4 @@ function translateDom() {
     });
 }
 
-function setupForm() {
-    const form = document.getElementById('personal-customize-form');
-    if (!form) return;
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        generateUrl();
-    });
-
-    // Auto-preview on input change
-    form.querySelectorAll('input, textarea, select').forEach(input => {
-        input.addEventListener('change', updatePreview);
-    });
-}
-
-function getFormParams() {
-    const title = document.getElementById('p-title').value;
-    const name = document.getElementById('p-name').value;
-    const date = document.getElementById('p-date').value;
-    const msg = document.getElementById('p-msg').value;
-    const photo = document.getElementById('p-photo').value;
-    const bg = document.getElementById('p-bg').value;
-    const logo = document.getElementById('p-logo').value;
-    const color = document.getElementById('p-color').value;
-    const cta = document.getElementById('p-cta').value;
-    const link = document.getElementById('p-link').value;
-    const video = document.getElementById('p-video').value;
-    const textColor = document.getElementById('p-text-color').value;
-    const numColor = document.getElementById('p-num-color').value;
-    const font = document.getElementById('p-font').value;
-    const qr = document.getElementById('p-qr').value;
-    const titleSize = document.getElementById('p-title-size').value;
-    const numSize = document.getElementById('p-num-size').value;
-    const templateId = document.getElementById('p-template-id').value;
-
-    const params = new URLSearchParams();
-    if (title) params.set('title', title);
-    if (name) params.set('name', name);
-    if (date) params.set('date', date);
-    if (msg) params.set('msg', msg);
-    if (photo) params.set('photo', photo);
-    if (bg) params.set('bg', bg);
-    if (logo) params.set('logo', logo);
-    if (color && color !== '#7C3AED') params.set('color', color);
-    if (cta) params.set('cta', cta);
-    if (link) params.set('link', link);
-    if (video) params.set('video', video);
-    if (textColor && textColor !== '#FFFFFF') params.set('textColor', textColor);
-    if (numColor && numColor !== '#7C3AED') params.set('numColor', numColor);
-    if (font) params.set('font', font);
-    if (qr === 'false') params.set('qr', 'false');
-    if (titleSize && titleSize !== '8') params.set('titleSize', titleSize);
-    if (numSize && numSize !== '12') params.set('numSize', numSize);
-    if (templateId) params.set('template', templateId);
-
-    return params;
-}
-
-function generateUrl() {
-    const params = getFormParams();
-    const lang = I18nLoader.applyLayoutDirection();
-    const finalUrl = `${window.location.origin}/${lang}/live/?${params.toString()}`;
-
-    const resultSection = document.getElementById('result-section');
-    const urlBox = document.getElementById('generated-url');
-    
-    resultSection.style.display = 'block';
-    urlBox.textContent = finalUrl;
-    
-    // Smooth scroll to results
-    resultSection.scrollIntoView({ behavior: 'smooth' });
-}
-
-function updatePreview() {
-    const params = getFormParams();
-    if (!params.get('title')) params.set('title', 'Preview');
-
-    const lang = I18nLoader.applyLayoutDirection();
-    const previewUrl = `${window.location.origin}/${lang}/live/?${params.toString()}`;
-
-    const previewContainer = document.getElementById('personal-preview-container');
-    const iframe = document.getElementById('preview-iframe');
-    
-    previewContainer.style.display = 'block';
-    iframe.src = previewUrl;
-}
-
 document.addEventListener('DOMContentLoaded', init);
-
-// Copy to clipboard
-document.getElementById('btn-copy')?.addEventListener('click', () => {
-    const url = document.getElementById('generated-url').textContent;
-    navigator.clipboard.writeText(url).then(() => {
-        const btn = document.getElementById('btn-copy');
-        const oldText = btn.textContent;
-        btn.textContent = 'Copied!';
-        setTimeout(() => btn.textContent = oldText, 2000);
-    });
-});

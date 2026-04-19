@@ -30,130 +30,154 @@
             <button id="theme-toggle" class="theme-toggle-btn">☀️ / 🌙</button>
         </div>
     </header>
-    <main class="container">
-        <div class="create-form-container">
-            <h1 class="section-title" data-i18n="personal_custom.header">Customize Your Celebration</h1>
-            <p class="description-text" id="template-info-text">--</p>
-            
-            <form id="personal-customize-form">
-                <input type="hidden" id="p-template-id">
-                
-                <div class="form-group">
-                    <label class="form-label" data-i18n="personal_custom.title_label">Event Title</label>
-                    <input type="text" id="p-title" class="form-input" placeholder="e.g. Happy Birthday Sarah">
-                </div>
 
-                <div class="form-grid">
+    <main>
+        <div class="create-layout">
+
+            <!-- Form Column -->
+            <div class="create-form-container">
+                <h1 class="section-title" data-i18n="personal_custom.header">Customize Your Celebration</h1>
+                <p class="description-text" id="template-info-text">--</p>
+
+                <form id="personal-customize-form">
+                    <input type="hidden" id="p-template-id">
+
                     <div class="form-group">
-                        <label class="form-label" data-i18n="personal_custom.name_label">Person Name</label>
-                        <input type="text" id="p-name" class="form-input" placeholder="e.g. Sarah">
+                        <label class="form-label" data-i18n="personal_custom.title_label">Event Title</label>
+                        <input type="text" id="p-title" class="form-input" placeholder="e.g. Happy Birthday Sarah">
                     </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="personal_custom.name_label">Person Name</label>
+                            <input type="text" id="p-name" class="form-input" placeholder="e.g. Sarah">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="personal_custom.date_label">Event Date & Time</label>
+                            <input type="datetime-local" id="p-date" class="form-input" required>
+                        </div>
+                    </div>
+
                     <div class="form-group">
-                        <label class="form-label" data-i18n="personal_custom.date_label">Event Date & Time</label>
-                        <input type="datetime-local" id="p-date" class="form-input" required>
+                        <label class="form-label" data-i18n="personal_custom.message_label">Message</label>
+                        <textarea id="p-msg" class="form-input" rows="3" style="resize: vertical;"></textarea>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="personal_custom.photo_label">Photo URL</label>
+                            <input type="url" id="p-photo" class="form-input" placeholder="https://...">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                <span data-i18n="personal_custom.bg_label">Background URL</span>
+                                <a href="https://imgbb.com" target="_blank" class="upload-hint">&#8593; 上传</a>
+                            </label>
+                            <input type="url" id="p-bg" class="form-input" placeholder="https://...">
+                            <span class="field-hint">需要图片链接？在 <a href="https://imgbb.com" target="_blank" rel="noopener">imgbb.com</a> 上传 → 点击图片 → 复制<strong>直接链接</strong> → 粘贴到此处。</span>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">
+                                <span data-i18n="ui.form_logo">标志图片 URL</span>
+                                <a href="https://imgbb.com" target="_blank" class="upload-hint">&#8593; 上传</a>
+                            </label>
+                            <input type="url" id="p-logo" class="form-input" placeholder="https://...">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_color">主题颜色 (Hex)</label>
+                            <input type="color" id="p-color" class="form-input" value="#7C3AED">
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_text_color">文字颜色</label>
+                            <input type="color" id="p-text-color" class="form-input" value="#FFFFFF">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_num_color">数字颜色</label>
+                            <input type="color" id="p-num-color" class="form-input" value="#7C3AED">
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_font_family">字体系列</label>
+                            <select id="p-font" class="form-input">
+                                <option value="var(--font-family-sans)" data-i18n="ui.font_modern">现代 (无衬线体)</option>
+                                <option value="var(--font-family-serif)" data-i18n="ui.font_classic">经典 (衬线体)</option>
+                                <option value="'Tajawal', sans-serif" data-i18n="ui.font_arabic">阿拉伯 (Tajawal)</option>
+                                <option value="'Courier New', monospace" data-i18n="ui.font_digital">数字 (等宽体)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_show_qr">显示二维码</label>
+                            <select id="p-qr" class="form-input">
+                                <option value="true" data-i18n="ui.yes" selected>Yes</option>
+                                <option value="false" data-i18n="ui.no">No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_cta_text">按钮文字 (CTA)</label>
+                            <input type="text" id="p-cta" class="form-input" placeholder="Buy Tickets">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_link">活动链接 URL</label>
+                            <input type="url" id="p-link" class="form-input" placeholder="https://...">
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_title_size">标题字体大小 (vh)</label>
+                            <input type="number" id="p-title-size" class="form-input" value="8" min="1" max="20">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_num_size">数字大小 (vh)</label>
+                            <input type="number" id="p-num-size" class="form-input" value="12" min="1" max="30">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_video">YouTube/嵌入视频 URL</label>
+                        <input type="url" id="p-video" class="form-input" placeholder="https://youtube.com/...">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" id="btn-preview" class="btn btn-primary" data-i18n="ui.open_live">Open Live</button>
+                        <button type="button" id="btn-copy" class="btn btn-secondary" data-i18n="ui.copy">复制</button>
+                    </div>
+                </form>
+
+                <div class="result-section" id="result-section">
+                    <div class="generated-url-box" id="generated-url"></div>
+                    <div style="display:flex; gap:12px; margin-top:16px;">
+                        <a id="btn-tv" class="btn btn-secondary" target="_blank" href="#" data-i18n="ui.tv_mode">电视模式</a>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label class="form-label" data-i18n="personal_custom.message_label">Message</label>
-                    <textarea id="p-msg" class="form-input" rows="3" style="resize: vertical;"></textarea>
-                </div>
-
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="personal_custom.photo_label">Photo URL</label>
-                        <input type="url" id="p-photo" class="form-input" placeholder="https://...">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="personal_custom.bg_label">Background URL</label>
-                        <input type="url" id="p-bg" class="form-input" placeholder="https://...">
-                    </div>
-                </div>
-
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_logo">标志图片 URL</label>
-                        <input type="url" id="p-logo" class="form-input" placeholder="https://...">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_color">主题颜色 (Hex)</label>
-                        <input type="color" id="p-color" class="form-input" value="#7C3AED">
-                    </div>
-                </div>
-
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_cta_text">按钮文字 (CTA)</label>
-                        <input type="text" id="p-cta" class="form-input" placeholder="Buy Tickets">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_link">活动链接 URL</label>
-                        <input type="url" id="p-link" class="form-input" placeholder="https://...">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label" data-i18n="ui.form_video">YouTube/嵌入视频 URL</label>
-                    <input type="url" id="p-video" class="form-input" placeholder="https://youtube.com/...">
-                </div>
-
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_text_color">文字颜色</label>
-                        <input type="color" id="p-text-color" class="form-input" value="#FFFFFF">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_num_color">数字颜色</label>
-                        <input type="color" id="p-num-color" class="form-input" value="#7C3AED">
-                    </div>
-                </div>
-
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_font_family">字体系列</label>
-                        <select id="p-font" class="form-input">
-                            <option value="var(--font-family-sans)" data-i18n="ui.font_modern">Modern</option>
-                            <option value="var(--font-family-serif)" data-i18n="ui.font_classic">Classic</option>
-                            <option value="'Tajawal', sans-serif" data-i18n="ui.font_arabic">Arabic</option>
-                            <option value="'Courier New', monospace" data-i18n="ui.font_digital">Digital</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_show_qr">显示二维码</label>
-                        <select id="p-qr" class="form-input">
-                            <option value="true" data-i18n="ui.yes" selected>Yes</option>
-                            <option value="false" data-i18n="ui.no">No</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_title_size">标题字体大小 (vh)</label>
-                        <input type="number" id="p-title-size" class="form-input" value="8" min="1" max="20">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_num_size">数字大小 (vh)</label>
-                        <input type="number" id="p-num-size" class="form-input" value="12" min="1" max="30">
-                    </div>
-                </div>
-
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-primary btn-full" data-i18n="personal_custom.btn_generate">Generate My Page</button>
-                </div>
-            </form>
-
-            <div class="preview-card" style="margin-top: 32px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-color); display: none;" id="personal-preview-container">
-                <h3 style="margin-bottom: 16px; font-size: 1rem; opacity: 0.7; text-transform: uppercase;" data-i18n="personal_custom.preview_title">Template Preview</h3>
-                <iframe id="preview-iframe" style="width: 100%; height: 500px; border: none; border-radius: var(--radius-md); background: #000;"></iframe>
             </div>
 
-             <div class="result-section" id="result-section" style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 32px; display: none;">
-                <div class="generated-url-box" id="generated-url"></div>
-                <button id="btn-copy" class="btn btn-secondary btn-full" style="margin-top: 16px;" data-i18n="ui.copy">Copy Link</button>
+            <!-- Sticky Preview Column -->
+            <div class="create-preview-panel">
+                <div class="preview-panel-label" data-i18n="ui.preview">Preview</div>
+                <div class="preview-iframe-wrap" id="preview-wrap">
+                    <div class="preview-placeholder" id="preview-placeholder">
+                        <span>&#9654;</span>
+                        <p data-i18n="ui.preview_hint">Fill in the form to see a live preview</p>
+                    </div>
+                    <iframe id="preview-iframe" style="display:none;" allowfullscreen></iframe>
+                </div>
             </div>
+
         </div>
     </main>
+
     <script type="module" src="/js/pages/personal-customize.js"></script>
 </body>
 </html>

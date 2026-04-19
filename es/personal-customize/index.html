@@ -30,130 +30,154 @@
             <button id="theme-toggle" class="theme-toggle-btn">☀️ / 🌙</button>
         </div>
     </header>
-    <main class="container">
-        <div class="create-form-container">
-            <h1 class="section-title" data-i18n="personal_custom.header">Customize Your Celebration</h1>
-            <p class="description-text" id="template-info-text">--</p>
-            
-            <form id="personal-customize-form">
-                <input type="hidden" id="p-template-id">
-                
-                <div class="form-group">
-                    <label class="form-label" data-i18n="personal_custom.title_label">Event Title</label>
-                    <input type="text" id="p-title" class="form-input" placeholder="e.g. Happy Birthday Sarah">
-                </div>
 
-                <div class="form-grid">
+    <main>
+        <div class="create-layout">
+
+            <!-- Form Column -->
+            <div class="create-form-container">
+                <h1 class="section-title" data-i18n="personal_custom.header">Customize Your Celebration</h1>
+                <p class="description-text" id="template-info-text">--</p>
+
+                <form id="personal-customize-form">
+                    <input type="hidden" id="p-template-id">
+
                     <div class="form-group">
-                        <label class="form-label" data-i18n="personal_custom.name_label">Person Name</label>
-                        <input type="text" id="p-name" class="form-input" placeholder="e.g. Sarah">
+                        <label class="form-label" data-i18n="personal_custom.title_label">Event Title</label>
+                        <input type="text" id="p-title" class="form-input" placeholder="e.g. Happy Birthday Sarah">
                     </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="personal_custom.name_label">Person Name</label>
+                            <input type="text" id="p-name" class="form-input" placeholder="e.g. Sarah">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="personal_custom.date_label">Event Date & Time</label>
+                            <input type="datetime-local" id="p-date" class="form-input" required>
+                        </div>
+                    </div>
+
                     <div class="form-group">
-                        <label class="form-label" data-i18n="personal_custom.date_label">Event Date & Time</label>
-                        <input type="datetime-local" id="p-date" class="form-input" required>
+                        <label class="form-label" data-i18n="personal_custom.message_label">Message</label>
+                        <textarea id="p-msg" class="form-input" rows="3" style="resize: vertical;"></textarea>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="personal_custom.photo_label">Photo URL</label>
+                            <input type="url" id="p-photo" class="form-input" placeholder="https://...">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                <span data-i18n="personal_custom.bg_label">Background URL</span>
+                                <a href="https://imgbb.com" target="_blank" class="upload-hint">&#8593; Subir</a>
+                            </label>
+                            <input type="url" id="p-bg" class="form-input" placeholder="https://...">
+                            <span class="field-hint">¿Necesitas una URL de imagen? Súbela en <a href="https://imgbb.com" target="_blank" rel="noopener">imgbb.com</a> → haz clic en tu imagen → copia el <strong>enlace directo</strong> → pégalo aquí.</span>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label">
+                                <span data-i18n="ui.form_logo">URL de Imagen del Logo</span>
+                                <a href="https://imgbb.com" target="_blank" class="upload-hint">&#8593; Subir</a>
+                            </label>
+                            <input type="url" id="p-logo" class="form-input" placeholder="https://...">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_color">Color de Acento (Hex)</label>
+                            <input type="color" id="p-color" class="form-input" value="#7C3AED">
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_text_color">Color del Texto</label>
+                            <input type="color" id="p-text-color" class="form-input" value="#FFFFFF">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_num_color">Color de los Números</label>
+                            <input type="color" id="p-num-color" class="form-input" value="#7C3AED">
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_font_family">Familia de Fuente</label>
+                            <select id="p-font" class="form-input">
+                                <option value="var(--font-family-sans)" data-i18n="ui.font_modern">Moderno (Sans)</option>
+                                <option value="var(--font-family-serif)" data-i18n="ui.font_classic">Clásico (Serif)</option>
+                                <option value="'Tajawal', sans-serif" data-i18n="ui.font_arabic">Árabe (Tajawal)</option>
+                                <option value="'Courier New', monospace" data-i18n="ui.font_digital">Digital (Mono)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_show_qr">Mostrar Código QR</label>
+                            <select id="p-qr" class="form-input">
+                                <option value="true" data-i18n="ui.yes" selected>Yes</option>
+                                <option value="false" data-i18n="ui.no">No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_cta_text">Texto del Botón CTA</label>
+                            <input type="text" id="p-cta" class="form-input" placeholder="Buy Tickets">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_link">URL del Enlace CTA/Vivo</label>
+                            <input type="url" id="p-link" class="form-input" placeholder="https://...">
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_title_size">Tamaño de Fuente del Título (vh)</label>
+                            <input type="number" id="p-title-size" class="form-input" value="8" min="1" max="20">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="ui.form_num_size">Tamaño de los Números (vh)</label>
+                            <input type="number" id="p-num-size" class="form-input" value="12" min="1" max="30">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="ui.form_video">URL de Video de YouTube/Inserción</label>
+                        <input type="url" id="p-video" class="form-input" placeholder="https://youtube.com/...">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" id="btn-preview" class="btn btn-primary" data-i18n="ui.open_live">Open Live</button>
+                        <button type="button" id="btn-copy" class="btn btn-secondary" data-i18n="ui.copy">Copiar</button>
+                    </div>
+                </form>
+
+                <div class="result-section" id="result-section">
+                    <div class="generated-url-box" id="generated-url"></div>
+                    <div style="display:flex; gap:12px; margin-top:16px;">
+                        <a id="btn-tv" class="btn btn-secondary" target="_blank" href="#" data-i18n="ui.tv_mode">Modo TV</a>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label class="form-label" data-i18n="personal_custom.message_label">Message</label>
-                    <textarea id="p-msg" class="form-input" rows="3" style="resize: vertical;"></textarea>
-                </div>
-
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="personal_custom.photo_label">Photo URL</label>
-                        <input type="url" id="p-photo" class="form-input" placeholder="https://...">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="personal_custom.bg_label">Background URL</label>
-                        <input type="url" id="p-bg" class="form-input" placeholder="https://...">
-                    </div>
-                </div>
-
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_logo">URL de Imagen del Logo</label>
-                        <input type="url" id="p-logo" class="form-input" placeholder="https://...">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_color">Color de Acento (Hex)</label>
-                        <input type="color" id="p-color" class="form-input" value="#7C3AED">
-                    </div>
-                </div>
-
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_cta_text">Texto del Botón CTA</label>
-                        <input type="text" id="p-cta" class="form-input" placeholder="Buy Tickets">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_link">URL del Enlace CTA/Vivo</label>
-                        <input type="url" id="p-link" class="form-input" placeholder="https://...">
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label" data-i18n="ui.form_video">URL de Video de YouTube/Inserción</label>
-                    <input type="url" id="p-video" class="form-input" placeholder="https://youtube.com/...">
-                </div>
-
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_text_color">Color del Texto</label>
-                        <input type="color" id="p-text-color" class="form-input" value="#FFFFFF">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_num_color">Color de los Números</label>
-                        <input type="color" id="p-num-color" class="form-input" value="#7C3AED">
-                    </div>
-                </div>
-
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_font_family">Familia de Fuente</label>
-                        <select id="p-font" class="form-input">
-                            <option value="var(--font-family-sans)" data-i18n="ui.font_modern">Modern</option>
-                            <option value="var(--font-family-serif)" data-i18n="ui.font_classic">Classic</option>
-                            <option value="'Tajawal', sans-serif" data-i18n="ui.font_arabic">Arabic</option>
-                            <option value="'Courier New', monospace" data-i18n="ui.font_digital">Digital</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_show_qr">Mostrar Código QR</label>
-                        <select id="p-qr" class="form-input">
-                            <option value="true" data-i18n="ui.yes" selected>Yes</option>
-                            <option value="false" data-i18n="ui.no">No</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_title_size">Tamaño de Fuente del Título (vh)</label>
-                        <input type="number" id="p-title-size" class="form-input" value="8" min="1" max="20">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_num_size">Tamaño de los Números (vh)</label>
-                        <input type="number" id="p-num-size" class="form-input" value="12" min="1" max="30">
-                    </div>
-                </div>
-
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-primary btn-full" data-i18n="personal_custom.btn_generate">Generate My Page</button>
-                </div>
-            </form>
-
-            <div class="preview-card" style="margin-top: 32px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-color); display: none;" id="personal-preview-container">
-                <h3 style="margin-bottom: 16px; font-size: 1rem; opacity: 0.7; text-transform: uppercase;" data-i18n="personal_custom.preview_title">Template Preview</h3>
-                <iframe id="preview-iframe" style="width: 100%; height: 500px; border: none; border-radius: var(--radius-md); background: #000;"></iframe>
             </div>
 
-             <div class="result-section" id="result-section" style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 32px; display: none;">
-                <div class="generated-url-box" id="generated-url"></div>
-                <button id="btn-copy" class="btn btn-secondary btn-full" style="margin-top: 16px;" data-i18n="ui.copy">Copy Link</button>
+            <!-- Sticky Preview Column -->
+            <div class="create-preview-panel">
+                <div class="preview-panel-label" data-i18n="ui.preview">Preview</div>
+                <div class="preview-iframe-wrap" id="preview-wrap">
+                    <div class="preview-placeholder" id="preview-placeholder">
+                        <span>&#9654;</span>
+                        <p data-i18n="ui.preview_hint">Fill in the form to see a live preview</p>
+                    </div>
+                    <iframe id="preview-iframe" style="display:none;" allowfullscreen></iframe>
+                </div>
             </div>
+
         </div>
     </main>
+
     <script type="module" src="/js/pages/personal-customize.js"></script>
 </body>
 </html>
