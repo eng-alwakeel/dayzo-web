@@ -17,7 +17,7 @@ const scripts = [
 scripts.forEach(script => {
     console.log(`\n--- Running ${script} ---`);
     try {
-        const output = execSync(`node scripts/${script}`, { encoding: 'utf8' });
+        const output = execSync(`"${process.execPath}" scripts/${script}`, { encoding: 'utf8' });
         console.log(output);
     } catch (error) {
         console.error(`❌ Error running ${script}:`);

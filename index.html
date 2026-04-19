@@ -3,33 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dayzo Language Router</title>
+    <title>Dayzo - Countdown to Any Event</title>
     <script>
-        // Language detection router
         (function() {
-            const supported = ['en', 'es', 'pt', 'fr', 'de', 'ar', 'hi', 'id', 'zh'];
+            const supported = ["en","es","pt","fr","de","ar","hi","id","zh"];
             const navLang = navigator.language.slice(0,2);
             const redirectLang = supported.includes(navLang) ? navLang : 'en';
-            
-            // Redirect to appropriate language homepage
             window.location.replace('/' + redirectLang + '/');
         })();
     </script>
 </head>
 <body>
     <noscript>
-        <h1>Welcome to Dayzo</h1>
-        <p>Please select a language:</p>
+        <h1>Dayzo</h1>
         <ul>
-            <li><a href="/en/">English</a></li>
-            <li><a href="/es/">Español</a></li>
-            <li><a href="/pt/">Português</a></li>
-            <li><a href="/fr/">Français</a></li>
-            <li><a href="/de/">Deutsch</a></li>
-            <li><a href="/ar/">العربية</a></li>
-            <li><a href="/hi/">हिन्दी</a></li>
-            <li><a href="/id/">Bahasa Indonesia</a></li>
-            <li><a href="/zh/">简体中文</a></li>
+            <li><a href="/en/">EN</a></li>
+            <li><a href="/es/">ES</a></li>
+            <li><a href="/pt/">PT</a></li>
+            <li><a href="/fr/">FR</a></li>
+            <li><a href="/de/">DE</a></li>
+            <li><a href="/ar/">AR</a></li>
+            <li><a href="/hi/">HI</a></li>
+            <li><a href="/id/">ID</a></li>
+            <li><a href="/zh/">ZH</a></li>
         </ul>
     </noscript>
 </body>

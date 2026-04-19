@@ -109,3 +109,33 @@ langs.forEach(lang => {
     fs.writeFileSync(filePath, template(lang));
     console.log(`Updated ${filePath}`);
 });
+
+// Also generate the root index.html (Language Router)
+const rootIndexPath = path.join(baseDir, 'index.html');
+const routerTemplate = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dayzo - Countdown to Any Event</title>
+    <script>
+        (function() {
+            const supported = ${JSON.stringify(langs)};
+            const navLang = navigator.language.slice(0,2);
+            const redirectLang = supported.includes(navLang) ? navLang : 'en';
+            window.location.replace('/' + redirectLang + '/');
+        })();
+    </script>
+</head>
+<body>
+    <noscript>
+        <h1>Dayzo</h1>
+        <ul>
+            ${langs.map(l => `<li><a href="/${l}/">${l.toUpperCase()}</a></li>`).join('\n            ')}
+        </ul>
+    </noscript>
+</body>
+</html>`;
+
+fs.writeFileSync(rootIndexPath, routerTemplate);
+console.log(`Updated root ${rootIndexPath}`);
