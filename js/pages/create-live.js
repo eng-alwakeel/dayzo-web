@@ -13,6 +13,17 @@ async function init() {
     await fetchAndRenderTemplates();
     ThemeManager.bindToggleSwitch('theme-toggle', dictionary);
     initDefaultPreview();
+    scalePreviewIframe();
+    window.addEventListener('resize', scalePreviewIframe);
+}
+
+function scalePreviewIframe() {
+    const wrap = document.querySelector('.preview-iframe-wrap');
+    const iframe = document.getElementById('preview-iframe');
+    if (!wrap || !iframe) return;
+    const scale = wrap.clientWidth / 1280;
+    iframe.style.transform = `scale(${scale})`;
+    wrap.style.height = `${Math.round(720 * scale)}px`;
 }
 
 function initDefaultPreview() {
