@@ -130,5 +130,162 @@
     },
     "category": "holiday",
     "name_key": "events.fathers_day"
+  },
+  {
+    "slug": "hanukkah",
+    "name": "Hanukkah",
+    "type": "variable",
+    "dates": {
+      "2025": "2025-12-14",
+      "2026": "2026-12-04",
+      "2027": "2027-12-24",
+      "2028": "2028-12-12"
+    },
+    "category": "religious",
+    "name_key": "events.hanukkah"
+  },
+  {
+    "slug": "holi",
+    "name": "Holi",
+    "type": "variable",
+    "dates": {
+      "2026": "2026-03-03",
+      "2027": "2027-03-22",
+      "2028": "2028-03-11"
+    },
+    "category": "religious",
+    "name_key": "events.holi"
+  },
+  {
+    "slug": "good-friday",
+    "name": "Good Friday",
+    "type": "variable",
+    "dates": {
+      "2026": "2026-04-03",
+      "2027": "2027-03-26",
+      "2028": "2028-04-14"
+    },
+    "category": "religious",
+    "name_key": "events.good_friday"
+  },
+  {
+    "slug": "ash-wednesday",
+    "name": "Ash Wednesday",
+    "type": "variable",
+    "dates": {
+      "2026": "2026-02-18",
+      "2027": "2027-02-10",
+      "2028": "2028-03-01"
+    },
+    "category": "religious",
+    "name_key": "events.ash_wednesday"
+  },
+  {
+    "slug": "canada-thanksgiving",
+    "name": "Canadian Thanksgiving",
+    "type": "variable",
+    "dates": {
+      "2026": "2026-10-12",
+      "2027": "2027-10-11",
+      "2028": "2028-10-09"
+    },
+    "category": "holiday",
+    "name_key": "events.canada_thanksgiving"
+  },
+  {
+    "slug": "chuseok",
+    "name": "Chuseok",
+    "type": "variable",
+    "dates": {
+      "2026": "2026-09-25",
+      "2027": "2027-10-15",
+      "2028": "2028-10-03"
+    },
+    "category": "holiday",
+    "name_key": "events.chuseok"
+  },
+  {
+    "slug": "mid-autumn-festival",
+    "name": "Mid-Autumn Festival",
+    "type": "variable",
+    "dates": {
+      "2026": "2026-09-25",
+      "2027": "2027-10-15",
+      "2028": "2028-10-03"
+    },
+    "category": "holiday",
+    "name_key": "events.mid_autumn_festival"
+  },
+  {
+    "slug": "vesak",
+    "name": "Vesak / Buddha Day",
+    "type": "variable",
+    "dates": {
+      "2026": "2026-05-10",
+      "2027": "2027-05-29",
+      "2028": "2028-05-18"
+    },
+    "category": "religious",
+    "name_key": "events.vesak"
+  },
+  {
+    "slug": "purim",
+    "name": "Purim",
+    "type": "variable",
+    "dates": {
+      "2026": "2026-03-03",
+      "2027": "2027-03-23",
+      "2028": "2028-03-12"
+    },
+    "category": "religious",
+    "name_key": "events.purim"
+  },
+  {
+    "slug": "rosh-hashanah",
+    "name": "Rosh Hashanah",
+    "type": "variable",
+    "dates": {
+      "2026": "2026-09-11",
+      "2027": "2027-10-01",
+      "2028": "2028-09-20"
+    },
+    "category": "religious",
+    "name_key": "events.rosh_hashanah"
+  },
+  {
+    "slug": "yom-kippur",
+    "name": "Yom Kippur",
+    "type": "variable",
+    "dates": {
+      "2026": "2026-09-20",
+      "2027": "2027-10-10",
+      "2028": "2028-09-29"
+    },
+    "category": "religious",
+    "name_key": "events.yom_kippur"
+  },
+  {
+    "slug": "carnaval",
+    "name": "Carnaval",
+    "type": "variable",
+    "dates": {
+      "2026": "2026-02-12",
+      "2027": "2027-03-04",
+      "2028": "2028-02-24"
+    },
+    "category": "holiday",
+    "name_key": "events.carnaval"
+  },
+  {
+    "slug": "victoria-day",
+    "name": "Victoria Day",
+    "type": "variable",
+    "dates": {
+      "2026": "2026-05-18",
+      "2027": "2027-05-24",
+      "2028": "2028-05-22"
+    },
+    "category": "holiday",
+    "name_key": "events.victoria_day"
   }
 ]

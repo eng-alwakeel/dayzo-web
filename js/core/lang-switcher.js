@@ -26,6 +26,8 @@ export const LangSwitcher = {
         select.addEventListener('change', (e) => {
             const newLang = e.target.value;
             if (newLang === currentLang) return;
+            // Save preference so next visit remembers it
+            try { localStorage.setItem('dayzo_lang', newLang); } catch(_) {}
             
             // Rewrite URL:
             // /en/how-many-days-until-christmas/ -> /ar/how-many-days-until-christmas/

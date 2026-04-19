@@ -60,5 +60,299 @@
       "2028": "2028-11-23T00:00:00Z"
     },
     "type": "national"
+  },
+  {
+    "slug": "canada-day",
+    "name_key": "events.canada_day",
+    "month": 7,
+    "day": 1,
+    "type": "national"
+  },
+  {
+    "slug": "uk-bonfire-night",
+    "name_key": "events.uk_bonfire_night",
+    "month": 11,
+    "day": 5,
+    "type": "national"
+  },
+  {
+    "slug": "uk-st-georges-day",
+    "name_key": "events.uk_st_georges_day",
+    "month": 4,
+    "day": 23,
+    "type": "national"
+  },
+  {
+    "slug": "australia-day",
+    "name_key": "events.australia_day",
+    "month": 1,
+    "day": 26,
+    "type": "national"
+  },
+  {
+    "slug": "anzac-day",
+    "name_key": "events.anzac_day",
+    "month": 4,
+    "day": 25,
+    "type": "national"
+  },
+  {
+    "slug": "brazil-independence-day",
+    "name_key": "events.brazil_independence_day",
+    "month": 9,
+    "day": 7,
+    "type": "national"
+  },
+  {
+    "slug": "brazil-republic-day",
+    "name_key": "events.brazil_republic_day",
+    "month": 11,
+    "day": 15,
+    "type": "national"
+  },
+  {
+    "slug": "mexico-independence-day",
+    "name_key": "events.mexico_independence_day",
+    "month": 9,
+    "day": 16,
+    "type": "national"
+  },
+  {
+    "slug": "cinco-de-mayo",
+    "name_key": "events.cinco_de_mayo",
+    "month": 5,
+    "day": 5,
+    "type": "national"
+  },
+  {
+    "slug": "dia-de-muertos",
+    "name_key": "events.dia_de_muertos",
+    "month": 11,
+    "day": 2,
+    "type": "national"
+  },
+  {
+    "slug": "china-national-day",
+    "name_key": "events.china_national_day",
+    "month": 10,
+    "day": 1,
+    "type": "national"
+  },
+  {
+    "slug": "japan-constitution-day",
+    "name_key": "events.japan_constitution_day",
+    "month": 5,
+    "day": 3,
+    "type": "national"
+  },
+  {
+    "slug": "japan-childrens-day",
+    "name_key": "events.japan_childrens_day",
+    "month": 5,
+    "day": 5,
+    "type": "national"
+  },
+  {
+    "slug": "japan-respect-aged-day",
+    "name_key": "events.japan_respect_aged_day",
+    "month": 9,
+    "day": 15,
+    "type": "national"
+  },
+  {
+    "slug": "indonesia-independence-day",
+    "name_key": "events.indonesia_independence_day",
+    "month": 8,
+    "day": 17,
+    "type": "national"
+  },
+  {
+    "slug": "turkey-republic-day",
+    "name_key": "events.turkey_republic_day",
+    "month": 10,
+    "day": 29,
+    "type": "national"
+  },
+  {
+    "slug": "turkey-national-sovereignty",
+    "name_key": "events.turkey_national_sovereignty",
+    "month": 4,
+    "day": 23,
+    "type": "national"
+  },
+  {
+    "slug": "uae-national-day",
+    "name_key": "events.uae_national_day",
+    "month": 12,
+    "day": 2,
+    "type": "national"
+  },
+  {
+    "slug": "qatar-national-day",
+    "name_key": "events.qatar_national_day",
+    "month": 12,
+    "day": 18,
+    "type": "national"
+  },
+  {
+    "slug": "kuwait-national-day",
+    "name_key": "events.kuwait_national_day",
+    "month": 2,
+    "day": 25,
+    "type": "national"
+  },
+  {
+    "slug": "kuwait-liberation-day",
+    "name_key": "events.kuwait_liberation_day",
+    "month": 2,
+    "day": 26,
+    "type": "national"
+  },
+  {
+    "slug": "egypt-revolution-day",
+    "name_key": "events.egypt_revolution_day",
+    "month": 7,
+    "day": 23,
+    "type": "national"
+  },
+  {
+    "slug": "nigeria-independence-day",
+    "name_key": "events.nigeria_independence_day",
+    "month": 10,
+    "day": 1,
+    "type": "national"
+  },
+  {
+    "slug": "south-africa-freedom-day",
+    "name_key": "events.south_africa_freedom_day",
+    "month": 4,
+    "day": 27,
+    "type": "national"
+  },
+  {
+    "slug": "south-africa-heritage-day",
+    "name_key": "events.south_africa_heritage_day",
+    "month": 9,
+    "day": 24,
+    "type": "national"
+  },
+  {
+    "slug": "argentina-independence-day",
+    "name_key": "events.argentina_independence_day",
+    "month": 7,
+    "day": 9,
+    "type": "national"
+  },
+  {
+    "slug": "colombia-independence-day",
+    "name_key": "events.colombia_independence_day",
+    "month": 7,
+    "day": 20,
+    "type": "national"
+  },
+  {
+    "slug": "spain-national-day",
+    "name_key": "events.spain_national_day",
+    "month": 10,
+    "day": 12,
+    "type": "national"
+  },
+  {
+    "slug": "italy-republic-day",
+    "name_key": "events.italy_republic_day",
+    "month": 6,
+    "day": 2,
+    "type": "national"
+  },
+  {
+    "slug": "portugal-national-day",
+    "name_key": "events.portugal_national_day",
+    "month": 6,
+    "day": 10,
+    "type": "national"
+  },
+  {
+    "slug": "netherlands-kings-day",
+    "name_key": "events.netherlands_kings_day",
+    "month": 4,
+    "day": 27,
+    "type": "national"
+  },
+  {
+    "slug": "russia-national-day",
+    "name_key": "events.russia_national_day",
+    "month": 6,
+    "day": 12,
+    "type": "national"
+  },
+  {
+    "slug": "russia-victory-day",
+    "name_key": "events.russia_victory_day",
+    "month": 5,
+    "day": 9,
+    "type": "national"
+  },
+  {
+    "slug": "singapore-national-day",
+    "name_key": "events.singapore_national_day",
+    "month": 8,
+    "day": 9,
+    "type": "national"
+  },
+  {
+    "slug": "malaysia-national-day",
+    "name_key": "events.malaysia_national_day",
+    "month": 8,
+    "day": 31,
+    "type": "national"
+  },
+  {
+    "slug": "philippines-independence-day",
+    "name_key": "events.philippines_independence_day",
+    "month": 6,
+    "day": 12,
+    "type": "national"
+  },
+  {
+    "slug": "thailand-songkran",
+    "name_key": "events.thailand_songkran",
+    "month": 4,
+    "day": 13,
+    "type": "national"
+  },
+  {
+    "slug": "vietnam-independence-day",
+    "name_key": "events.vietnam_independence_day",
+    "month": 9,
+    "day": 2,
+    "type": "national"
+  },
+  {
+    "slug": "pakistan-independence-day",
+    "name_key": "events.pakistan_independence_day",
+    "month": 8,
+    "day": 14,
+    "type": "national"
+  },
+  {
+    "slug": "korea-liberation-day",
+    "name_key": "events.korea_liberation_day",
+    "month": 8,
+    "day": 15,
+    "type": "national"
+  },
+  {
+    "slug": "korea-independence-movement",
+    "name_key": "events.korea_independence_movement",
+    "month": 3,
+    "day": 1,
+    "type": "national"
+  },
+  {
+    "slug": "nz-waitangi-day",
+    "name_key": "events.nz_waitangi_day",
+    "month": 2,
+    "day": 6,
+    "type": "national"
   }
 ]

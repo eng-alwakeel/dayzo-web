@@ -79,5 +79,275 @@
     "day": 21,
     "category": "season",
     "name_key": "events.spring"
+  },
+  {
+    "slug": "new-years-eve",
+    "name": "New Year's Eve",
+    "type": "fixed",
+    "month": 12,
+    "day": 31,
+    "category": "holiday",
+    "name_key": "events.new_years_eve"
+  },
+  {
+    "slug": "st-patricks-day",
+    "name": "St. Patrick's Day",
+    "type": "fixed",
+    "month": 3,
+    "day": 17,
+    "category": "holiday",
+    "name_key": "events.st_patricks_day"
+  },
+  {
+    "slug": "april-fools",
+    "name": "April Fools' Day",
+    "type": "fixed",
+    "month": 4,
+    "day": 1,
+    "category": "fun",
+    "name_key": "events.april_fools"
+  },
+  {
+    "slug": "international-workers-day",
+    "name": "International Workers' Day",
+    "type": "fixed",
+    "month": 5,
+    "day": 1,
+    "category": "event",
+    "name_key": "events.international_workers_day"
+  },
+  {
+    "slug": "star-wars-day",
+    "name": "Star Wars Day",
+    "type": "fixed",
+    "month": 5,
+    "day": 4,
+    "category": "fun",
+    "name_key": "events.star_wars_day"
+  },
+  {
+    "slug": "world-environment-day",
+    "name": "World Environment Day",
+    "type": "fixed",
+    "month": 6,
+    "day": 5,
+    "category": "event",
+    "name_key": "events.world_environment_day"
+  },
+  {
+    "slug": "world-ocean-day",
+    "name": "World Ocean Day",
+    "type": "fixed",
+    "month": 6,
+    "day": 8,
+    "category": "event",
+    "name_key": "events.world_ocean_day"
+  },
+  {
+    "slug": "world-music-day",
+    "name": "World Music Day",
+    "type": "fixed",
+    "month": 6,
+    "day": 21,
+    "category": "event",
+    "name_key": "events.world_music_day"
+  },
+  {
+    "slug": "world-photography-day",
+    "name": "World Photography Day",
+    "type": "fixed",
+    "month": 8,
+    "day": 19,
+    "category": "event",
+    "name_key": "events.world_photography_day"
+  },
+  {
+    "slug": "world-youth-day",
+    "name": "International Youth Day",
+    "type": "fixed",
+    "month": 8,
+    "day": 12,
+    "category": "event",
+    "name_key": "events.world_youth_day"
+  },
+  {
+    "slug": "world-peace-day",
+    "name": "World Peace Day",
+    "type": "fixed",
+    "month": 9,
+    "day": 21,
+    "category": "event",
+    "name_key": "events.world_peace_day"
+  },
+  {
+    "slug": "world-heart-day",
+    "name": "World Heart Day",
+    "type": "fixed",
+    "month": 9,
+    "day": 29,
+    "category": "event",
+    "name_key": "events.world_heart_day"
+  },
+  {
+    "slug": "world-coffee-day",
+    "name": "International Coffee Day",
+    "type": "fixed",
+    "month": 10,
+    "day": 1,
+    "category": "fun",
+    "name_key": "events.world_coffee_day"
+  },
+  {
+    "slug": "world-teachers-day",
+    "name": "World Teachers' Day",
+    "type": "fixed",
+    "month": 10,
+    "day": 5,
+    "category": "event",
+    "name_key": "events.world_teachers_day"
+  },
+  {
+    "slug": "world-mental-health-day",
+    "name": "World Mental Health Day",
+    "type": "fixed",
+    "month": 10,
+    "day": 10,
+    "category": "event",
+    "name_key": "events.world_mental_health_day"
+  },
+  {
+    "slug": "world-food-day",
+    "name": "World Food Day",
+    "type": "fixed",
+    "month": 10,
+    "day": 16,
+    "category": "event",
+    "name_key": "events.world_food_day"
+  },
+  {
+    "slug": "world-kindness-day",
+    "name": "World Kindness Day",
+    "type": "fixed",
+    "month": 11,
+    "day": 13,
+    "category": "event",
+    "name_key": "events.world_kindness_day"
+  },
+  {
+    "slug": "world-diabetes-day",
+    "name": "World Diabetes Day",
+    "type": "fixed",
+    "month": 11,
+    "day": 14,
+    "category": "event",
+    "name_key": "events.world_diabetes_day"
+  },
+  {
+    "slug": "boxing-day",
+    "name": "Boxing Day",
+    "type": "fixed",
+    "month": 12,
+    "day": 26,
+    "category": "holiday",
+    "name_key": "events.boxing_day"
+  },
+  {
+    "slug": "international-womens-day",
+    "name": "International Women's Day",
+    "type": "fixed",
+    "month": 3,
+    "day": 8,
+    "category": "event",
+    "name_key": "events.international_womens_day"
+  },
+  {
+    "slug": "world-health-day",
+    "name": "World Health Day",
+    "type": "fixed",
+    "month": 4,
+    "day": 7,
+    "category": "event",
+    "name_key": "events.world_health_day"
+  },
+  {
+    "slug": "world-book-day",
+    "name": "World Book Day",
+    "type": "fixed",
+    "month": 4,
+    "day": 23,
+    "category": "event",
+    "name_key": "events.world_book_day"
+  },
+  {
+    "slug": "pi-day",
+    "name": "Pi Day",
+    "type": "fixed",
+    "month": 3,
+    "day": 14,
+    "category": "fun",
+    "name_key": "events.pi_day"
+  },
+  {
+    "slug": "groundhog-day",
+    "name": "Groundhog Day",
+    "type": "fixed",
+    "month": 2,
+    "day": 2,
+    "category": "fun",
+    "name_key": "events.groundhog_day"
+  },
+  {
+    "slug": "world-cancer-day",
+    "name": "World Cancer Day",
+    "type": "fixed",
+    "month": 2,
+    "day": 4,
+    "category": "event",
+    "name_key": "events.world_cancer_day"
+  },
+  {
+    "slug": "human-rights-day",
+    "name": "Human Rights Day",
+    "type": "fixed",
+    "month": 12,
+    "day": 10,
+    "category": "event",
+    "name_key": "events.human_rights_day"
+  },
+  {
+    "slug": "world-friendship-day",
+    "name": "International Friendship Day",
+    "type": "fixed",
+    "month": 7,
+    "day": 30,
+    "category": "event",
+    "name_key": "events.world_friendship_day"
+  },
+  {
+    "slug": "world-emoji-day",
+    "name": "World Emoji Day",
+    "type": "fixed",
+    "month": 7,
+    "day": 17,
+    "category": "fun",
+    "name_key": "events.world_emoji_day"
+  },
+  {
+    "slug": "world-animal-day",
+    "name": "World Animal Day",
+    "type": "fixed",
+    "month": 10,
+    "day": 4,
+    "category": "event",
+    "name_key": "events.world_animal_day"
+  },
+  {
+    "slug": "world-science-day",
+    "name": "World Science Day",
+    "type": "fixed",
+    "month": 11,
+    "day": 10,
+    "category": "event",
+    "name_key": "events.world_science_day"
   }
 ]

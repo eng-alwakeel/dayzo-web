@@ -87,13 +87,54 @@ async function loadData() {
         const years = yearsReq ? await yearsReq.json() : [];
         const days = daysReq ? await daysReq.json() : [];
 
-        // Discover user country code (very basic heuristic)
+        // Detect user country from IANA timezone
         const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
-        let userCountry = "US"; // Default
-        if (tz.includes("Riyadh") || tz.includes("Qatar") || tz.includes("Dubai") || tz.includes("Asia/Riyadh")) userCountry = "SA";
-        else if (tz.includes("Paris") || tz.includes("Europe/Paris")) userCountry = "FR";
-        else if (tz.includes("Berlin") || tz.includes("Europe/Berlin")) userCountry = "DE";
-        else if (tz.includes("Calcutta") || tz.includes("Kolkata") || tz.includes("Asia/Kolkata")) userCountry = "IN";
+        const TZ_COUNTRY = {
+            "Africa/Cairo":"EG","Africa/Lagos":"NG","Africa/Johannesburg":"ZA","Africa/Nairobi":"KE","Africa/Accra":"GH","Africa/Casablanca":"MA","Africa/Tunis":"TN","Africa/Algiers":"DZ",
+            "America/New_York":"US","America/Chicago":"US","America/Denver":"US","America/Los_Angeles":"US","America/Phoenix":"US","America/Anchorage":"US","America/Honolulu":"US",
+            "America/Toronto":"CA","America/Vancouver":"CA","America/Montreal":"CA","America/Edmonton":"CA","America/Winnipeg":"CA",
+            "America/Sao_Paulo":"BR","America/Manaus":"BR","America/Fortaleza":"BR","America/Recife":"BR",
+            "America/Mexico_City":"MX","America/Monterrey":"MX","America/Tijuana":"MX",
+            "America/Argentina/Buenos_Aires":"AR","America/Argentina/Cordoba":"AR",
+            "America/Bogota":"CO","America/Lima":"PE","America/Santiago":"CL","America/Caracas":"VE",
+            "America/Havana":"CU","America/Santo_Domingo":"DO",
+            "Asia/Riyadh":"SA","Asia/Dubai":"AE","Asia/Qatar":"QA","Asia/Kuwait":"KW","Asia/Bahrain":"BH","Asia/Muscat":"OM","Asia/Aden":"YE",
+            "Asia/Baghdad":"IQ","Asia/Beirut":"LB","Asia/Damascus":"SY","Asia/Amman":"JO",
+            "Asia/Cairo":"EG","Africa/Cairo":"EG",
+            "Asia/Kolkata":"IN","Asia/Calcutta":"IN",
+            "Asia/Jakarta":"ID","Asia/Makassar":"ID","Asia/Jayapura":"ID",
+            "Asia/Tokyo":"JP",
+            "Asia/Shanghai":"CN","Asia/Hong_Kong":"HK","Asia/Macau":"MO","Asia/Urumqi":"CN",
+            "Asia/Seoul":"KR",
+            "Asia/Bangkok":"TH",
+            "Asia/Ho_Chi_Minh":"VN","Asia/Hanoi":"VN",
+            "Asia/Karachi":"PK",
+            "Asia/Dhaka":"BD",
+            "Asia/Manila":"PH",
+            "Asia/Kuala_Lumpur":"MY","Asia/Kuching":"MY",
+            "Asia/Singapore":"SG",
+            "Asia/Tehran":"IR",
+            "Asia/Istanbul":"TR",
+            "Asia/Jerusalem":"IL","Asia/Tel_Aviv":"IL",
+            "Asia/Colombo":"LK","Asia/Kathmandu":"NP",
+            "Asia/Rangoon":"MM","Asia/Yangon":"MM",
+            "Asia/Tashkent":"UZ","Asia/Almaty":"KZ",
+            "Australia/Sydney":"AU","Australia/Melbourne":"AU","Australia/Brisbane":"AU","Australia/Perth":"AU","Australia/Adelaide":"AU",
+            "Pacific/Auckland":"NZ","Pacific/Chatham":"NZ",
+            "Europe/London":"GB","Europe/Dublin":"IE",
+            "Europe/Paris":"FR",
+            "Europe/Berlin":"DE","Europe/Vienna":"AT","Europe/Zurich":"CH",
+            "Europe/Madrid":"ES",
+            "Europe/Rome":"IT",
+            "Europe/Lisbon":"PT",
+            "Europe/Amsterdam":"NL","Europe/Brussels":"BE",
+            "Europe/Warsaw":"PL","Europe/Prague":"CZ","Europe/Budapest":"HU","Europe/Bratislava":"SK",
+            "Europe/Moscow":"RU","Europe/Kaliningrad":"RU","Europe/Samara":"RU","Asia/Yekaterinburg":"RU",
+            "Europe/Stockholm":"SE","Europe/Oslo":"NO","Europe/Copenhagen":"DK","Europe/Helsinki":"FI",
+            "Europe/Athens":"GR","Europe/Bucharest":"RO","Europe/Sofia":"BG",
+            "Europe/Kiev":"UA","Europe/Kyiv":"UA",
+        };
+        const userCountry = TZ_COUNTRY[tz] || "ZZ";
 
         // Collect slugs for local events based on country map
         if (countryMap[userCountry]) {

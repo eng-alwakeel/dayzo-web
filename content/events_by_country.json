@@ -1,18 +1,28 @@
 {
   "ZZ": [
     "new-year",
+    "new-years-eve",
     "valentines-day",
     "halloween",
     "christmas",
-    "new-years-eve",
-    "black-friday"
+    "black-friday",
+    "international-womens-day",
+    "international-workers-day",
+    "world-environment-day",
+    "world-book-day",
+    "world-mental-health-day"
   ],
   "US": [
     "us-independence-day",
     "thanksgiving-us",
     "halloween",
     "black-friday",
-    "christmas"
+    "christmas",
+    "new-year",
+    "new-years-eve",
+    "st-patricks-day",
+    "groundhog-day",
+    "star-wars-day"
   ],
   "SA": [
     "sa-founding-day",
@@ -21,25 +31,248 @@
     "eid-al-fitr",
     "eid-al-adha"
   ],
+  "AE": [
+    "uae-national-day",
+    "ramadan",
+    "eid-al-fitr",
+    "eid-al-adha",
+    "new-year"
+  ],
+  "QA": [
+    "qatar-national-day",
+    "ramadan",
+    "eid-al-fitr",
+    "eid-al-adha",
+    "new-year"
+  ],
+  "KW": [
+    "kuwait-national-day",
+    "kuwait-liberation-day",
+    "ramadan",
+    "eid-al-fitr",
+    "eid-al-adha"
+  ],
+  "EG": [
+    "egypt-revolution-day",
+    "ramadan",
+    "eid-al-fitr",
+    "eid-al-adha",
+    "new-year"
+  ],
   "FR": [
     "fr-bastille-day",
     "new-year",
     "valentines-day",
     "easter",
-    "christmas"
+    "christmas",
+    "boxing-day"
   ],
   "DE": [
     "de-unity-day",
     "easter",
     "halloween",
     "christmas",
-    "new-years-eve"
+    "new-years-eve",
+    "new-year"
+  ],
+  "GB": [
+    "uk-bonfire-night",
+    "uk-st-georges-day",
+    "boxing-day",
+    "easter",
+    "christmas",
+    "new-year",
+    "halloween",
+    "st-patricks-day"
   ],
   "IN": [
     "in-republic-day",
     "in-independence-day",
+    "diwali",
+    "holi",
     "new-year",
     "valentines-day",
+    "vesak"
+  ],
+  "CN": [
+    "chinese-new-year",
+    "china-national-day",
+    "mid-autumn-festival",
+    "international-workers-day",
+    "new-year"
+  ],
+  "JP": [
+    "japan-constitution-day",
+    "japan-childrens-day",
+    "japan-respect-aged-day",
+    "new-year",
+    "christmas"
+  ],
+  "KR": [
+    "korea-liberation-day",
+    "korea-independence-movement",
+    "chuseok",
+    "new-year",
+    "christmas"
+  ],
+  "ID": [
+    "indonesia-independence-day",
+    "ramadan",
+    "eid-al-fitr",
+    "eid-al-adha",
+    "new-year",
+    "vesak"
+  ],
+  "TR": [
+    "turkey-republic-day",
+    "turkey-national-sovereignty",
+    "new-year",
+    "ramadan",
     "eid-al-fitr"
+  ],
+  "BR": [
+    "brazil-independence-day",
+    "brazil-republic-day",
+    "carnaval",
+    "new-year",
+    "christmas",
+    "valentines-day"
+  ],
+  "MX": [
+    "mexico-independence-day",
+    "cinco-de-mayo",
+    "dia-de-muertos",
+    "new-year",
+    "christmas"
+  ],
+  "CA": [
+    "canada-day",
+    "canada-thanksgiving",
+    "victoria-day",
+    "halloween",
+    "christmas",
+    "new-year",
+    "boxing-day"
+  ],
+  "AU": [
+    "australia-day",
+    "anzac-day",
+    "boxing-day",
+    "halloween",
+    "christmas",
+    "new-year"
+  ],
+  "NZ": [
+    "nz-waitangi-day",
+    "anzac-day",
+    "boxing-day",
+    "christmas",
+    "new-year"
+  ],
+  "RU": [
+    "russia-national-day",
+    "russia-victory-day",
+    "new-year",
+    "christmas"
+  ],
+  "ES": [
+    "spain-national-day",
+    "easter",
+    "christmas",
+    "new-year",
+    "valentines-day"
+  ],
+  "IT": [
+    "italy-republic-day",
+    "easter",
+    "christmas",
+    "new-year",
+    "valentines-day"
+  ],
+  "PT": [
+    "portugal-national-day",
+    "easter",
+    "christmas",
+    "new-year"
+  ],
+  "NL": [
+    "netherlands-kings-day",
+    "easter",
+    "christmas",
+    "new-year"
+  ],
+  "AR": [
+    "argentina-independence-day",
+    "carnaval",
+    "new-year",
+    "christmas"
+  ],
+  "CO": [
+    "colombia-independence-day",
+    "carnaval",
+    "new-year",
+    "christmas"
+  ],
+  "SG": [
+    "singapore-national-day",
+    "chinese-new-year",
+    "vesak",
+    "christmas",
+    "new-year"
+  ],
+  "MY": [
+    "malaysia-national-day",
+    "chinese-new-year",
+    "eid-al-fitr",
+    "vesak",
+    "christmas",
+    "new-year"
+  ],
+  "PH": [
+    "philippines-independence-day",
+    "christmas",
+    "new-year",
+    "easter",
+    "valentines-day"
+  ],
+  "TH": [
+    "thailand-songkran",
+    "new-year",
+    "christmas",
+    "vesak"
+  ],
+  "VN": [
+    "vietnam-independence-day",
+    "new-year",
+    "mid-autumn-festival",
+    "christmas"
+  ],
+  "PK": [
+    "pakistan-independence-day",
+    "ramadan",
+    "eid-al-fitr",
+    "eid-al-adha",
+    "new-year"
+  ],
+  "NG": [
+    "nigeria-independence-day",
+    "new-year",
+    "christmas",
+    "easter",
+    "eid-al-fitr"
+  ],
+  "ZA": [
+    "south-africa-freedom-day",
+    "south-africa-heritage-day",
+    "new-year",
+    "christmas",
+    "easter"
+  ],
+  "IL": [
+    "rosh-hashanah",
+    "yom-kippur",
+    "hanukkah",
+    "purim",
+    "new-year"
   ]
 }
