@@ -72,7 +72,7 @@ body.mode-tv {
   text-align: center;
   text-shadow: 0 8px 32px rgba(0,0,0,0.8);
   letter-spacing: -0.03em;
-  color: #FFFFFF;
+  color: var(--color-text, #FFFFFF);
   line-height: 1.1;
   max-width: 90vw;
 }
@@ -98,7 +98,7 @@ body.mode-tv {
   line-height: 1;
   text-shadow: 0 12px 48px rgba(0,0,0,0.5);
   font-family: var(--font-family-numbers);
-  color: #FFFFFF;
+  color: var(--color-numbers, #FFFFFF);
 }
 
 .tv-label {

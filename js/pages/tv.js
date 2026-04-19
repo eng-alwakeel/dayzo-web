@@ -49,8 +49,10 @@ async function hydrateFromQuery() {
                 if (tmpl.textColor && !params.get('textColor')) textColor = tmpl.textColor;
                 if (tmpl.numColor && !params.get('numColor')) numColor = tmpl.numColor;
                 if (tmpl.font && !params.get('font')) font = tmpl.font;
-                
-                // Template specific behavior
+                if (tmpl.previewGradient && !bgUrl) {
+                    const bgEl = document.getElementById('tv-bg');
+                    if (bgEl) bgEl.style.background = tmpl.previewGradient;
+                }
                 if (tmpl.rules && tmpl.rules.qrVisible === false) {
                     showQr = false;
                 }
