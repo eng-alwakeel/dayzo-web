@@ -75,6 +75,7 @@ const template = (lang) => {
     <link rel="stylesheet" href="/css/homepage.css">
     <script type="module" src="/js/core/theme.js"></script>
     <script type="module" src="/js/core/lang-switcher.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
 </head>
 <body>
     
@@ -105,6 +106,11 @@ const template = (lang) => {
             </div>
         </section>
 
+        <div class="ad-unit">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
         <!-- Trending -->
         <section class="section" id="trending">
             <h2 class="section-title" data-i18n="ui.trending_events">${getVal(dict, 'ui.trending_events') || 'Trending'}</h2>
@@ -112,6 +118,11 @@ const template = (lang) => {
                 <!-- Injected via JS -->
             </div>
         </section>
+
+        <div class="ad-unit">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
 
         <!-- Popular locally (Placeholder for specific logic later) -->
         <section class="section" id="local">

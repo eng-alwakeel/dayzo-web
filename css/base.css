@@ -205,3 +205,9 @@ input:focus, select:focus {
 [dir="rtl"] {
   overflow-x: hidden;
 }
+
+.ad-unit {
+  margin: 24px 0;
+  min-height: 90px;
+  text-align: center;
+}

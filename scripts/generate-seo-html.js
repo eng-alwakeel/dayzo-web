@@ -212,6 +212,7 @@ const template = (lang, eventConfig) => {
     <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.0/build/qrcode.min.js"></script>
     <script type="module" src="/js/core/theme.js"></script>
     <script type="module" src="/js/core/lang-switcher.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="brand-header">
@@ -247,6 +248,11 @@ const template = (lang, eventConfig) => {
             </div>
         </section>
 
+        <div class="ad-unit">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
         <div class="quick-answer">
             <p id="quick-answer-text">${qaStr}</p>
         </div>
@@ -274,6 +280,11 @@ const template = (lang, eventConfig) => {
                 <div id="content-why" class="content-text">${contentWhy}</div>
             </div>` : ''}
         </section>
+
+        <div class="ad-unit">
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
 
         <section class="share-embed-section">
             <h2 class="section-title" data-i18n="ui.share">${getVal(dict, 'ui.share') || 'Share'}</h2>
