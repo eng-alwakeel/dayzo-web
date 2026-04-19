@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dayzo.com/sitemap.xml
+Sitemap: https://dayzo-web1.vercel.app/sitemap.xml
