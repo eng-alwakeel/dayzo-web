@@ -175,13 +175,14 @@ const templateCreate = (lang) => {
                         <input type="color" id="c-color" class="form-input" value="#7C3AED" style="padding:4px; height:48px;">
                     </div>
                      <div class="form-group">
-                        <label class="form-label" data-i18n="ui.form_logo">${getVal(dict, 'ui.form_logo') || 'Logo URL'}</label>
+                        <label class="form-label" data-i18n="ui.form_logo">${getVal(dict, 'ui.form_logo') || 'Logo URL'} <a href="https://imgbb.com" target="_blank" rel="noopener" class="upload-hint">↑ ${getVal(dict, 'ui.upload_image') || 'Upload'}</a></label>
                         <input type="url" id="c-logo" class="form-input" placeholder="https://...">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-label" data-i18n="ui.form_bg">${getVal(dict, 'ui.form_bg') || 'Background Image'}</label>
+                    <label class="form-label" data-i18n="ui.form_bg">${getVal(dict, 'ui.form_bg') || 'Background Image'} <a href="https://imgbb.com" target="_blank" rel="noopener" class="upload-hint">↑ ${getVal(dict, 'ui.upload_image') || 'Upload'}</a></label>
                     <input type="url" id="c-bg" class="form-input" placeholder="https://...">
+                    <span class="field-hint" data-i18n="ui.upload_hint">${getVal(dict, 'ui.upload_hint') || 'Upload your image on imgbb.com → copy the "Direct link" → paste here'}</span>
                 </div>
                 <div class="form-grid">
                     <div class="form-group">
