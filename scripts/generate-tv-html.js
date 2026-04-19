@@ -54,7 +54,7 @@ const templateTv = (lang) => {
     
     <div class="tv-container">
         <header class="tv-branding">
-            <div class="brand-logo">Dayzo <span>LIVE</span></div>
+            <div class="tv-brand-logo">Dayzo <span>LIVE</span></div>
         </header>
 
         <main class="tv-content">
@@ -74,14 +74,7 @@ const templateTv = (lang) => {
             <div class="tv-finished-text" id="tv-finished-text" style="display:none;" data-i18n="ui.its_live">${getVal(dict, 'ui.its_live') || "It's Live"}</div>
         </main>
 
-        <footer class="tv-footer">
-             <div class="tv-qr-region">
-                <canvas id="tv-qr-canvas" width="100" height="100"></canvas>
-                <div class="tv-qr-text">
-                  <span data-i18n="ui.qr_placeholder">${getVal(dict, 'ui.qr_placeholder') || 'Scan for Mobile'}</span>
-                </div>
-            </div>
-        </footer>
+        <footer class="tv-footer"></footer>
     </div>
     
     <!-- Hidden theme toggle just in case -->

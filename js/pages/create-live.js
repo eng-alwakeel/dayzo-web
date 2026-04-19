@@ -3,6 +3,7 @@ import { ThemeManager } from '../core/theme.js';
 
 let dictionary = {};
 let lang = 'en';
+let generateAndShow; // hoisted reference
 
 async function init() {
     lang = I18nLoader.applyLayoutDirection();
@@ -11,6 +12,20 @@ async function init() {
     setupForm();
     await fetchAndRenderTemplates();
     ThemeManager.bindToggleSwitch('theme-toggle', dictionary);
+    initDefaultPreview();
+}
+
+function initDefaultPreview() {
+    // Pre-fill date to 30 days from now if empty
+    const dateInput = document.getElementById('c-date');
+    if (dateInput && !dateInput.value) {
+        const future = new Date();
+        future.setDate(future.getDate() + 30);
+        const pad = n => n.toString().padStart(2, '0');
+        dateInput.value = `${future.getFullYear()}-${pad(future.getMonth()+1)}-${pad(future.getDate())}T12:00`;
+    }
+    // Auto-load preview immediately
+    if (generateAndShow) generateAndShow();
 }
 
 async function fetchAndRenderTemplates() {
@@ -19,7 +34,7 @@ async function fetchAndRenderTemplates() {
         const templates = await req.json();
         const select = document.getElementById('c-template');
         if (!select) return;
-        
+
         templates.forEach(t => {
             const opt = document.createElement('option');
             opt.value = t.id;
@@ -39,11 +54,11 @@ function setupForm() {
     const btnCopy = document.getElementById('btn-copy');
     const resultBox = document.getElementById('result-section');
     const generatedUrlObj = document.getElementById('generated-url');
-    
+
     const getUrl = () => {
         const params = new URLSearchParams();
-        const getV = id => document.getElementById(id).value.trim();
-        
+        const getV = id => document.getElementById(id)?.value?.trim() ?? '';
+
         const title = getV('c-title');
         const template = getV('c-template');
         const date = getV('c-date');
@@ -59,16 +74,12 @@ function setupForm() {
         const cta = getV('c-cta');
         const link = getV('c-link');
         const video = getV('c-video');
-        
+
         if (title) params.append('title', title);
         if (template) params.append('template', template);
         if (date) {
-            // Try to force ISO format for engine tracking safely
-            try {
-                params.append('date', new Date(date).toISOString());
-            } catch(e) {
-                params.append('date', date);
-            }
+            try { params.append('date', new Date(date).toISOString()); }
+            catch(e) { params.append('date', date); }
         }
         if (bg) params.append('bg', bg);
         if (logo) params.append('logo', logo);
@@ -82,17 +93,17 @@ function setupForm() {
         if (cta) params.append('cta', cta);
         if (link) params.append('link', link);
         if (video) params.append('video', video);
-        
+
         return `${window.location.origin}/${lang}/live?${params.toString()}`;
     };
 
-    const generateAndShow = (e) => {
-        if (e) e.preventDefault(); 
+    generateAndShow = (e) => {
+        if (e) e.preventDefault();
         const finalUrl = getUrl();
-        generatedUrlObj.textContent = finalUrl;
-        resultBox.classList.add('active');
-        
-        // Update Iframe Preview
+
+        if (generatedUrlObj) generatedUrlObj.textContent = finalUrl;
+        if (resultBox) resultBox.classList.add('active');
+
         const placeholder = document.getElementById('preview-placeholder');
         const iframe = document.getElementById('preview-iframe');
         if (iframe) {
@@ -106,29 +117,31 @@ function setupForm() {
         return finalUrl;
     };
 
-    // Real-time preview on input
+    // Real-time preview — 400ms debounce
     const form = document.getElementById('create-live-form');
     let debounceTimer;
     form.addEventListener('input', () => {
         clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => {
-            generateAndShow();
-        }, 800);
+        debounceTimer = setTimeout(() => generateAndShow(), 400);
+    });
+    form.addEventListener('change', () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => generateAndShow(), 200);
     });
 
-    // Preview Button (Open in new tab)
-    btnPreview.addEventListener('click', (e) => {
+    // Preview button → open in new tab
+    btnPreview?.addEventListener('click', (e) => {
         const url = generateAndShow(e);
         window.open(url, '_blank');
     });
 
-    // Copy flow
-    btnCopy.addEventListener('click', (e) => {
+    // Copy link
+    btnCopy?.addEventListener('click', (e) => {
         const url = generateAndShow(e);
         navigator.clipboard.writeText(url).then(() => {
-            const oldText = btnCopy.textContent;
-            btnCopy.textContent = "Copied!";
-            setTimeout(() => btnCopy.textContent = oldText, 2000);
+            const old = btnCopy.textContent;
+            btnCopy.textContent = '✓ Copied!';
+            setTimeout(() => btnCopy.textContent = old, 2000);
         });
     });
 }
@@ -138,9 +151,7 @@ function translateStaticDom() {
         const key = el.getAttribute('data-i18n');
         const keys = key.split('.');
         let val = dictionary;
-        for (const k of keys) {
-            val = val ? val[k] : null;
-        }
+        for (const k of keys) { val = val ? val[k] : null; }
         if (val) {
             if (el.tagName === 'INPUT') el.placeholder = val;
             else el.textContent = val;
