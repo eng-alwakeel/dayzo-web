@@ -1,81 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Mono:wght@300;400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
 :root {
-  /* ── Official Dayzo Brand Palette (unchanged) ── */
-  --color-primary:      #7C3AED;
-  --color-primary-soft: #A78BFA;
-  --color-accent:       #C4B5FD;
-
+  /* 1. Official Dayzo Brand Palette (Hues are consistent) */
+  --color-primary: #7C3AED;      /* Primary Purple */
+  --color-primary-soft: #A78BFA; /* Secondary Purple */
+  --color-accent: #C4B5FD;       /* Accent Purple */
+  
   --color-success: #22C55E;
   --color-warning: #F59E0B;
-  --color-error:   #EF4444;
+  --color-error: #EF4444;
 
-  /* ── Light Mode Tokens ── */
-  --bg-page:      #FFFFFF;
+  /* 2. Light Mode Tokens (Default) */
+  --bg-page: #FFFFFF;
   --bg-secondary: #F8FAFC;
-  --bg-card:      #FFFFFF;
-  --text-primary:   #0F172A;
+  --bg-card: #FFFFFF;
+  --text-primary: #0F172A;
   --text-secondary: #64748B;
-  --border-color:   #E2E8F0;
-
-  /* Shadows */
+  --border-color: #E2E8F0;
+  
+  /* Shared Functional Token - Shadow */
   --shadow-sm: 0 2px 4px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
-  --shadow-md: 0 10px 25px -5px rgba(124,58,237,0.10), 0 8px 10px -6px rgba(15,23,42,0.05);
-  --shadow-lg: 0 20px 40px -10px rgba(124,58,237,0.15), 0 12px 20px -8px rgba(15,23,42,0.08);
-  --shadow-xl: 0 35px 60px -15px rgba(124,58,237,0.20), 0 20px 35px -10px rgba(15,23,42,0.10);
-  --shadow-glow: 0 0 40px rgba(124,58,237,0.35);
-  --shadow-glow-sm: 0 0 18px rgba(124,58,237,0.22);
+  --shadow-md: 0 10px 25px -5px rgba(124, 58, 237, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 20px 40px -10px rgba(124, 58, 237, 0.15), 0 12px 20px -8px rgba(15, 23, 42, 0.08);
+  --shadow-xl: 0 35px 60px -15px rgba(124, 58, 237, 0.2), 0 20px 35px -10px rgba(15, 23, 42, 0.1);
+  --shadow-glow: 0 0 30px rgba(124, 58, 237, 0.4);
 
-  /* ── Typography ── */
-  --font-display:        'Bricolage Grotesque', system-ui, sans-serif;
-  --font-body:           'Plus Jakarta Sans', system-ui, sans-serif;
-  --font-mono:           'DM Mono', 'Courier New', monospace;
-  --font-family-base:    var(--font-body);
-  --font-family-numbers: var(--font-mono);
-
+  /* 3. Typography Rules */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-family-numbers: 'Inter', system-ui, sans-serif;
+  
   /* Radius */
-  --radius-sm:   6px;
-  --radius-md:   14px;
-  --radius-lg:   22px;
-  --radius-xl:   32px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
   --radius-pill: 9999px;
 
-  /* Transitions */
-  --transition-fast:   0.18s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-normal: 0.38s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-slow:   0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Global Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ── Dark Mode ── */
+/* 4. Dark Mode Tokens */
 [data-theme="dark"] {
-  --bg-page:      #0A0F1E;
+  --bg-page: #0F172A;
   --bg-secondary: #111827;
-  --bg-card:      #151E30;
-  --text-primary:   #F1F5F9;
+  --bg-card: #1E293B;
+  --text-primary: #F1F5F9;
   --text-secondary: #94A3B8;
-  --border-color:   #1E2D45;
+  --border-color: #334155;
 
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.5);
-  --shadow-md: 0 10px 28px -4px rgba(0,0,0,0.55), 0 4px 10px -4px rgba(0,0,0,0.4);
-  --shadow-lg: 0 20px 48px -8px rgba(124,58,237,0.22), 0 12px 24px -8px rgba(0,0,0,0.65);
-  --shadow-xl: 0 36px 72px -12px rgba(124,58,237,0.28), 0 20px 40px -10px rgba(0,0,0,0.8);
-  --shadow-glow: 0 0 48px rgba(124,58,237,0.45);
-  --shadow-glow-sm: 0 0 20px rgba(124,58,237,0.30);
+  /* Adjust Shadows for Dark Mode to be more subtle but visible */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.4);
+  --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.5), 0 8px 10px -6px rgba(0,0,0,0.4);
+  --shadow-lg: 0 20px 40px -10px rgba(124, 58, 237, 0.2), 0 12px 20px -8px rgba(0,0,0,0.6);
+  --shadow-xl: 0 35px 60px -15px rgba(124, 58, 237, 0.3), 0 20px 35px -10px rgba(0,0,0,0.8);
+  --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.5);
 }
 
+/* 5. Auto Theme Support (System Preference) */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg-page:      #0A0F1E;
+    --bg-page: #0F172A;
     --bg-secondary: #111827;
-    --bg-card:      #151E30;
-    --text-primary:   #F1F5F9;
+    --bg-card: #1E293B;
+    --text-primary: #F1F5F9;
     --text-secondary: #94A3B8;
-    --border-color:   #1E2D45;
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.5);
-    --shadow-md: 0 10px 28px -4px rgba(0,0,0,0.55), 0 4px 10px -4px rgba(0,0,0,0.4);
-    --shadow-lg: 0 20px 48px -8px rgba(124,58,237,0.22), 0 12px 24px -8px rgba(0,0,0,0.65);
-    --shadow-xl: 0 36px 72px -12px rgba(124,58,237,0.28), 0 20px 40px -10px rgba(0,0,0,0.8);
-    --shadow-glow: 0 0 48px rgba(124,58,237,0.45);
-    --shadow-glow-sm: 0 0 20px rgba(124,58,237,0.30);
+    --border-color: #334155;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.4);
+    --shadow-md: 0 10px 25px -5px rgba(0,0,0,0.5), 0 8px 10px -6px rgba(0,0,0,0.4);
+    --shadow-lg: 0 20px 40px -10px rgba(124, 58, 237, 0.2), 0 12px 20px -8px rgba(0,0,0,0.6);
+    --shadow-xl: 0 35px 60px -15px rgba(124, 58, 237, 0.3), 0 20px 35px -10px rgba(0,0,0,0.8);
+    --shadow-glow: 0 0 40px rgba(124, 58, 237, 0.5);
   }
 }

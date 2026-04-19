@@ -157,13 +157,12 @@ function renderEventCards(containerId, events, lang) {
     
     container.innerHTML = ''; // clear
 
-    events.forEach((event, idx) => {
+    events.forEach(event => {
         const nameKeys = event.name_key.split('.');
         const name = dictionary[nameKeys[0]]?.[nameKeys[1]] || event.slug;
-
+        
         const card = document.createElement('div');
         card.className = 'event-card';
-        card.style.setProperty('--card-index', idx);
         card.innerHTML = `
             <div>
                 <h3 class="card-title">${name}</h3>
