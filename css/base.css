@@ -181,24 +181,40 @@ input:focus, select:focus {
 
 @media (max-width: 640px) {
   .brand-header {
-    padding: 12px 16px;
-  }
-  
-  .brand-header .brand-logo {
-    font-size: 1.25rem;
-  }
-
-  .header-actions {
+    padding: 10px 14px;
     gap: 8px;
   }
 
-  .lang-switcher, .theme-toggle-btn {
+  .brand-header .brand-logo {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .header-actions {
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .lang-switcher {
+    max-width: 90px;
+    padding: 6px 8px;
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .theme-toggle-btn {
     padding: 6px 10px;
     font-size: 0.8rem;
   }
 
   h1 { font-size: 1.75rem; }
-  h2 { font-size: 1.5rem; }
+  h2 { font-size: 1.4rem; }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
 }
 
 /* Fix for RTL Horizontal Scroll */

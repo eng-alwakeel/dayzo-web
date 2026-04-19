@@ -113,7 +113,8 @@ const templateCreate = (lang) => {
         </div>
     </header>
     <main class="container">
-        <div class="create-form-container">
+        <div class="create-layout">
+          <div class="create-form-container">
             <h1 class="section-title" data-i18n="ui.form_header">${getVal(dict, 'ui.form_header') || 'Generate Live Countdown'}</h1>
             <form id="create-live-form">
                 <div class="form-group">
@@ -201,13 +202,22 @@ const templateCreate = (lang) => {
                     <button type="button" class="btn btn-secondary" id="btn-copy" data-i18n="ui.btn_copy_link">${getVal(dict, 'ui.btn_copy_link') || 'Copy Link'}</button>
                 </div>
             </form>
-            <div class="preview-card" style="margin-top: 32px; padding: 24px; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-color); display: none;" id="live-preview-container">
-                <h3 style="margin-bottom: 16px; font-size: 1rem; opacity: 0.7; text-transform: uppercase;" data-i18n="ui.live_preview">${getVal(dict, 'ui.live_preview') || 'Live Preview'}</h3>
-                <iframe id="preview-iframe" style="width: 100%; height: 400px; border: none; border-radius: var(--radius-md); background: #000;"></iframe>
-            </div>
             <div class="result-section" id="result-section">
                 <div class="generated-url-box" id="generated-url"></div>
             </div>
+          </div>
+
+          <!-- Sticky Preview Panel -->
+          <div class="create-preview-panel">
+            <div class="preview-panel-label" data-i18n="ui.live_preview">${getVal(dict, 'ui.live_preview') || 'Live Preview'}</div>
+            <div id="live-preview-container" class="preview-iframe-wrap">
+              <div class="preview-placeholder" id="preview-placeholder">
+                <span>👆</span>
+                <p data-i18n="ui.preview_hint">${getVal(dict, 'ui.preview_hint') || 'Fill the form to see a live preview'}</p>
+              </div>
+              <iframe id="preview-iframe" style="display:none; width:100%; height:100%; border:none; border-radius: var(--radius-md); background:#000;"></iframe>
+            </div>
+          </div>
         </div>
     </main>
     <script type="module" src="/js/pages/create-live.js"></script>

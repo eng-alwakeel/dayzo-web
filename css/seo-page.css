@@ -290,13 +290,27 @@
 }
 
 @media (max-width: 640px) {
-  .countdown-hero { gap: 8px; margin: 32px 0; }
-  .countdown-segment { min-width: 60px; }
-  .countdown-value { font-size: clamp(2.5rem, 12vw, 4rem); }
-  .countdown-label { font-size: 0.65rem; letter-spacing: 0.1em; }
-  .content-block { padding: 20px; }
+  .seo-header { margin-top: 24px; }
+  .countdown-hero { gap: 8px; margin: 24px 0; flex-wrap: nowrap; }
+  .countdown-segment { min-width: 0; flex: 1; }
+  .countdown-value { font-size: clamp(2rem, 11vw, 3.5rem); }
+  .countdown-label { font-size: 0.6rem; letter-spacing: 0.08em; }
+  .quick-answer { padding: 0 4px; }
+  .quick-answer p { font-size: 1rem; }
+  .event-description { font-size: 1rem; margin-bottom: 32px; padding: 0 4px; }
+  .content-block { padding: 20px 16px; }
+  .enriched-content, .faq-section { margin-bottom: 32px; }
+  .share-embed-section { padding: 16px; margin-bottom: 32px; }
+  .share-row { flex-direction: column; }
+  .share-row .btn { width: 100%; text-align: center; }
+  .share-input { width: 100%; font-size: 0.8rem; }
+  .faq-question { font-size: 1rem; }
+  .faq-item { padding: 16px 0; }
+  .related-countdowns { margin-top: 40px; }
+  #related-events-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .related-countdowns .event-card { padding: 20px 12px; gap: 8px; }
   .create-cta-card { padding: 32px 20px; border-radius: 20px; }
   .create-cta-card h2 { font-size: 1.5rem; }
-  .hero-actions { flex-direction: column; align-items: stretch; padding: 0 16px; gap: 12px; }
+  .hero-actions { flex-direction: column; align-items: stretch; padding: 0 4px; gap: 10px; }
   .hero-actions .btn { margin: 0 !important; width: 100%; }
 }

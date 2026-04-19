@@ -178,11 +178,17 @@ body.mode-live, body.mode-tv {
 }
 
 @media (max-width: 768px) {
-  .live-countdown-wrap { gap: 12px; }
-  .live-segment { min-width: 60px; }
-  .live-num { font-size: 3.5rem; }
+  .live-container { padding: 20px 16px; }
+  .live-countdown-wrap { gap: clamp(8px, 3vw, 20px); }
+  .live-segment { min-width: 0; flex: 1; }
+  .live-num { font-size: clamp(2.5rem, 13vw, 6rem); }
+  .live-label { font-size: clamp(0.6rem, 2vw, 1rem); margin-top: 6px; }
+  .live-title { font-size: clamp(1.5rem, 6vw, 4rem); margin-bottom: 16px; }
   .live-header { flex-direction: column; gap: 8px; }
-  .live-footer { flex-direction: column; align-items: center; gap: 16px; width: 100%; }
+  .live-brand { font-size: 1.5rem; }
+  .live-footer { flex-direction: column; align-items: center; gap: 12px; width: 100%; }
+  .live-actions { display: flex; gap: 8px; width: 100%; justify-content: center; }
+  .live-qr-box { padding: 8px 16px; gap: 10px; }
 }
 
 /* Auto TV Mode for Landscape Mobile */
