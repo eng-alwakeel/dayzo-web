@@ -39,18 +39,21 @@ body.mode-tv {
 .tv-branding {
   display: flex;
   align-items: center;
-  font-size: clamp(1rem, 2.5vh, 2rem);
+}
+
+.tv-brand-logo {
+  font-size: clamp(1.1rem, 2.5vh, 2rem);
   font-weight: 900;
   letter-spacing: -0.04em;
-  opacity: 0.5;
   color: #FFFFFF;
 }
 
-.tv-branding .brand-logo span {
-  opacity: 0.6;
+.tv-brand-logo span {
+  color: var(--color-primary);
   font-weight: 400;
-  font-size: 0.7em;
+  font-size: 0.75em;
   margin-left: 6px;
+  letter-spacing: 0.05em;
 }
 
 /* ── Main Content ── */
