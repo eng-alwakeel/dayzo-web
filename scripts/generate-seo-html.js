@@ -191,8 +191,20 @@ const template = (lang, eventConfig) => {
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${titleStr}">
     <meta name="twitter:description" content="${metaDesc}">
+    <meta name="twitter:image" content="https://dayzo.com/images/og-preview.png">
+    <meta property="og:image" content="https://dayzo.com/images/og-preview.png">
+    <meta name="robots" content="index, follow">
     ${canonical}
     ${hreflangTags}
+    <script type="application/ld+json">${JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": eventName,
+        "startDate": targetDate,
+        "url": `https://dayzo.com/${lang}/how-many-days-until-${eventConfig.slug}/`,
+        "description": metaDesc,
+        "organizer": { "@type": "Organization", "name": "Dayzo", "url": "https://dayzo.com/" }
+    })}</script>
     <link rel="stylesheet" href="/css/variables.css">
     <link rel="stylesheet" href="/css/base.css">
     ${lang === 'ar' ? '<link rel="stylesheet" href="/css/rtl.css">' : ''}

@@ -20,14 +20,55 @@ const template = (lang) => {
     }).join('\n    ');
     hreflangTags += `\n    <link rel="alternate" hreflang="x-default" href="https://dayzo.com/en/">`;
 
+    const metaDesc = getVal(dict, 'ui.homepage_meta_desc') || 'Live countdown timers for holidays, events, and personal milestones.';
+    const ogTitle = getVal(dict, 'ui.homepage_og_title') || 'Dayzo – Live Countdown Timers';
+    const jsonLd = JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://dayzo.com/#website",
+                "url": "https://dayzo.com/",
+                "name": "Dayzo",
+                "description": metaDesc,
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": { "@type": "EntryPoint", "urlTemplate": `https://dayzo.com/${lang}/?q={search_term_string}` },
+                    "query-input": "required name=search_term_string"
+                },
+                "inLanguage": lang
+            },
+            {
+                "@type": "Organization",
+                "@id": "https://dayzo.com/#organization",
+                "name": "Dayzo",
+                "url": "https://dayzo.com/",
+                "logo": { "@type": "ImageObject", "url": "https://dayzo.com/images/og-preview.png" }
+            }
+        ]
+    });
+
     return `<!DOCTYPE html>
 <html lang="${lang}" dir="${lang === 'ar' ? 'rtl' : 'ltr'}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="ui.upcoming_events">${getVal(dict, 'ui.upcoming_events') || 'Dayzo'}</title>
+    <meta name="description" content="${metaDesc}">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dayzo.com/${lang}/">
+    <meta property="og:title" content="${ogTitle}">
+    <meta property="og:description" content="${metaDesc}">
+    <meta property="og:image" content="https://dayzo.com/images/og-preview.png">
+    <meta property="og:site_name" content="Dayzo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${ogTitle}">
+    <meta name="twitter:description" content="${metaDesc}">
+    <meta name="twitter:image" content="https://dayzo.com/images/og-preview.png">
     <link rel="canonical" href="https://dayzo.com/${lang}/">
     ${hreflangTags}
+    <script type="application/ld+json">${jsonLd}</script>
     <link rel="stylesheet" href="/css/variables.css">
     <link rel="stylesheet" href="/css/base.css">
     ${lang === 'ar' ? '<link rel="stylesheet" href="/css/rtl.css">' : ''}

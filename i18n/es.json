@@ -80,7 +80,11 @@
     "light_mode": "Modo Claro",
     "dark_mode": "Modo Oscuro",
     "tv_mode": "Modo TV",
-    "live_mode": "Modo En Vivo"
+    "live_mode": "Modo En Vivo",
+    "personal_templates_title": "Plantillas Personales",
+    "personal_templates_desc": "Elige una plantilla hermosa para tu celebración personal y personalízala en segundos.",
+    "homepage_meta_desc": "Temporizadores de cuenta regresiva en vivo para días festivos, eventos y hitos personales. Sigue los días, horas y minutos restantes.",
+    "homepage_og_title": "Dayzo – Contadores Regresivos en Vivo para Cada Evento"
   },
   "seo": {
     "quick_answer": "Faltan exactamente {days} días para {event} el {date}.",

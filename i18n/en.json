@@ -114,7 +114,9 @@
     "live_preview": "Live Preview",
     "placeholder_event": "e.g. Apple Keynote",
     "placeholder_cta": "Join Stream Now",
-    "placeholder_video": "YouTube Embed URL"
+    "placeholder_video": "YouTube Embed URL",
+    "homepage_meta_desc": "Live countdown timers for holidays, events, and personal milestones. Track the days, hours, and minutes remaining.",
+    "homepage_og_title": "Dayzo – Live Countdown Timers for Every Event"
   },
   "seo": {
     "quick_answer": "There are precisely {days} days until {event} on {date}.",
@@ -127,12 +129,30 @@
     "faq_2_a": "There are exactly {days} days remaining until {event}."
   },
   "ai_categories": {
-    "products": { "title": "Product Images", "desc": "Realistic commercial photos to promote your products." },
-    "social": { "title": "Social Media Images", "desc": "Engaging designs for social media platforms." },
-    "marketing": { "title": "Marketing Posters", "desc": "High-quality posters for your advertising campaigns." },
-    "realistic": { "title": "Realistic Images", "desc": "Professional natural photos and landscapes." },
-    "fantasy": { "title": "Art / Fantasy", "desc": "Fantasy worlds and unique artistic designs." },
-    "print": { "title": "High-Res for Print", "desc": "4K quality files ready for printing." }
+    "products": {
+      "title": "Product Images",
+      "desc": "Realistic commercial photos to promote your products."
+    },
+    "social": {
+      "title": "Social Media Images",
+      "desc": "Engaging designs for social media platforms."
+    },
+    "marketing": {
+      "title": "Marketing Posters",
+      "desc": "High-quality posters for your advertising campaigns."
+    },
+    "realistic": {
+      "title": "Realistic Images",
+      "desc": "Professional natural photos and landscapes."
+    },
+    "fantasy": {
+      "title": "Art / Fantasy",
+      "desc": "Fantasy worlds and unique artistic designs."
+    },
+    "print": {
+      "title": "High-Res for Print",
+      "desc": "4K quality files ready for printing."
+    }
   },
   "personal_templates": {
     "birthday": {

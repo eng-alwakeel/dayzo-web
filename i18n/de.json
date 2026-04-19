@@ -80,7 +80,11 @@
     "light_mode": "Heller Modus",
     "dark_mode": "Dunkler Modus",
     "tv_mode": "TV Modus",
-    "live_mode": "Live Modus"
+    "live_mode": "Live Modus",
+    "personal_templates_title": "Persönliche Vorlagen",
+    "personal_templates_desc": "Wähle eine schöne Vorlage für deine persönliche Feier und passe sie in Sekunden an.",
+    "homepage_meta_desc": "Live-Countdown-Timer für Feiertage, Ereignisse und persönliche Meilensteine. Verfolge die verbleibenden Tage, Stunden und Minuten.",
+    "homepage_og_title": "Dayzo – Live-Countdown-Timer für jedes Ereignis"
   },
   "seo": {
     "quick_answer": "Es sind genau {days} Tage bis {event} am {date}.",

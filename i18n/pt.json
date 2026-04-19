@@ -80,7 +80,11 @@
     "light_mode": "Modo Claro",
     "dark_mode": "Modo Escuro",
     "tv_mode": "Modo TV",
-    "live_mode": "Modo Ao Vivo"
+    "live_mode": "Modo Ao Vivo",
+    "personal_templates_title": "Modelos Pessoais",
+    "personal_templates_desc": "Escolha um belo modelo para sua celebração pessoal e personalize-o em segundos.",
+    "homepage_meta_desc": "Temporizadores de contagem regressiva ao vivo para feriados, eventos e marcos pessoais. Acompanhe os dias, horas e minutos restantes.",
+    "homepage_og_title": "Dayzo – Contagens Regressivas ao Vivo para Cada Evento"
   },
   "seo": {
     "quick_answer": "Faltam exatamente {days} dias para {event} em {date}.",

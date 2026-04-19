@@ -80,7 +80,11 @@
     "light_mode": "浅色模式",
     "dark_mode": "深色模式",
     "tv_mode": "电视模式",
-    "live_mode": "直播模式"
+    "live_mode": "直播模式",
+    "personal_templates_title": "个人模板",
+    "personal_templates_desc": "为您的个人庆典选择一个漂亮的模板，并在几秒钟内完成自定义。",
+    "homepage_meta_desc": "节假日、活动和个人里程碑的实时倒计时计时器。追踪剩余的天数、小时和分钟。",
+    "homepage_og_title": "Dayzo – 每个活动的实时倒计时"
   },
   "seo": {
     "quick_answer": "距离 {date} 的 {event} 还有整整 {days} 天。",
