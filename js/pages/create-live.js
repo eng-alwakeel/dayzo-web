@@ -23,9 +23,10 @@ async function fetchAndRenderTemplates() {
         templates.forEach(t => {
             const opt = document.createElement('option');
             opt.value = t.id;
-            
             const nameKeys = t.name_key.split('.');
-            opt.textContent = dictionary[nameKeys[0]]?.[nameKeys[1]] || t.previewStr;
+            let val = dictionary;
+            for (const k of nameKeys) { val = val ? val[k] : null; }
+            opt.textContent = (t.icon ? t.icon + ' ' : '') + (val || t.id);
             select.appendChild(opt);
         });
     } catch(e) {
@@ -92,11 +93,11 @@ function setupForm() {
         resultBox.classList.add('active');
         
         // Update Iframe Preview
-        const previewContainer = document.getElementById('live-preview-container');
+        const placeholder = document.getElementById('preview-placeholder');
         const iframe = document.getElementById('preview-iframe');
-        if (previewContainer && iframe) {
-            previewContainer.style.display = 'block';
-            // Use a temporary base to avoid infinite reloads if URL hasn't changed meaningfully
+        if (iframe) {
+            if (placeholder) placeholder.style.display = 'none';
+            iframe.style.display = 'block';
             if (iframe.dataset.lastUrl !== finalUrl) {
                 iframe.src = finalUrl;
                 iframe.dataset.lastUrl = finalUrl;

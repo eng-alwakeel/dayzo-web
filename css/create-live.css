@@ -1,13 +1,68 @@
 /* Dayzo Create Live & Form Interface */
 
+/* Two-column layout: form + sticky preview */
+.create-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 48px auto;
+  padding: 0 16px;
+}
+
 .create-form-container {
-  max-width: 640px;
-  margin: 64px auto;
   background: var(--bg-card);
-  padding: 48px;
+  padding: 40px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border-color);
+}
+
+/* Sticky preview panel */
+.create-preview-panel {
+  position: sticky;
+  top: 24px;
+}
+
+.preview-panel-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.5;
+  margin-bottom: 12px;
+}
+
+.preview-iframe-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-placeholder {
+  text-align: center;
+  opacity: 0.4;
+  padding: 24px;
+}
+
+.preview-placeholder span { font-size: 2.5rem; display: block; margin-bottom: 12px; }
+.preview-placeholder p { font-size: 0.9rem; }
+
+@media (max-width: 900px) {
+  .create-layout {
+    grid-template-columns: 1fr;
+  }
+  .create-preview-panel {
+    position: static;
+    order: -1;
+  }
 }
 
 .form-group {
