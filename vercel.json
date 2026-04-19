@@ -2,5 +2,12 @@
   "cleanUrls": true,
   "trailingSlash": true,
   "buildCommand": "npm run build",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "routes": [
+    {
+      "src": "/googlef6f8cb9b43edf411.html",
+      "dest": "/googlef6f8cb9b43edf411.html",
+      "headers": { "Cache-Control": "no-cache" }
+    }
+  ]
 }
