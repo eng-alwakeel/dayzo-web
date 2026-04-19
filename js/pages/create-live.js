@@ -3,7 +3,10 @@ import { ThemeManager } from '../core/theme.js';
 
 let dictionary = {};
 let lang = 'en';
-let generateAndShow; // hoisted reference
+let generateAndShow;
+let templateData = [];
+const IFRAME_W = 640;
+const IFRAME_H = 360;
 
 async function init() {
     lang = I18nLoader.applyLayoutDirection();
@@ -21,13 +24,12 @@ function scalePreviewIframe() {
     const wrap = document.querySelector('.preview-iframe-wrap');
     const iframe = document.getElementById('preview-iframe');
     if (!wrap || !iframe) return;
-    const scale = wrap.clientWidth / 1280;
+    const scale = wrap.clientWidth / IFRAME_W;
     iframe.style.transform = `scale(${scale})`;
-    wrap.style.height = `${Math.round(720 * scale)}px`;
+    wrap.style.height = `${Math.round(IFRAME_H * scale)}px`;
 }
 
 function initDefaultPreview() {
-    // Pre-fill date to 30 days from now if empty
     const dateInput = document.getElementById('c-date');
     if (dateInput && !dateInput.value) {
         const future = new Date();
@@ -35,18 +37,16 @@ function initDefaultPreview() {
         const pad = n => n.toString().padStart(2, '0');
         dateInput.value = `${future.getFullYear()}-${pad(future.getMonth()+1)}-${pad(future.getDate())}T12:00`;
     }
-    // Auto-load preview immediately
     if (generateAndShow) generateAndShow();
 }
 
 async function fetchAndRenderTemplates() {
     try {
         const req = await fetch('/data/templates.json');
-        const templates = await req.json();
+        templateData = await req.json();
         const select = document.getElementById('c-template');
         if (!select) return;
-
-        templates.forEach(t => {
+        templateData.forEach(t => {
             const opt = document.createElement('option');
             opt.value = t.id;
             const nameKeys = t.name_key.split('.');
@@ -55,9 +55,11 @@ async function fetchAndRenderTemplates() {
             opt.textContent = (t.icon ? t.icon + ' ' : '') + (val || t.id);
             select.appendChild(opt);
         });
-    } catch(e) {
-        console.error("Failed to load templates", e);
-    }
+    } catch(e) { console.error("Failed to load templates", e); }
+}
+
+function getTemplateById(id) {
+    return templateData.find(t => t.id === id) || null;
 }
 
 function setupForm() {
@@ -66,10 +68,10 @@ function setupForm() {
     const resultBox = document.getElementById('result-section');
     const generatedUrlObj = document.getElementById('generated-url');
 
+    const getV = id => document.getElementById(id)?.value?.trim() ?? '';
+
     const getUrl = () => {
         const params = new URLSearchParams();
-        const getV = id => document.getElementById(id)?.value?.trim() ?? '';
-
         const title = getV('c-title');
         const template = getV('c-template');
         const date = getV('c-date');
@@ -85,7 +87,6 @@ function setupForm() {
         const cta = getV('c-cta');
         const link = getV('c-link');
         const video = getV('c-video');
-
         if (title) params.append('title', title);
         if (template) params.append('template', template);
         if (date) {
@@ -104,49 +105,90 @@ function setupForm() {
         if (cta) params.append('cta', cta);
         if (link) params.append('link', link);
         if (video) params.append('video', video);
-
         return `${window.location.origin}/${lang}/live?${params.toString()}`;
+    };
+
+    // Send instant style updates to already-loaded iframe via postMessage
+    const sendPreviewMessage = () => {
+        const iframe = document.getElementById('preview-iframe');
+        if (!iframe?.contentWindow) return;
+        const templateId = getV('c-template');
+        const tmpl = getTemplateById(templateId);
+        iframe.contentWindow.postMessage({
+            type: 'DAYZO_PREVIEW',
+            title: getV('c-title') || 'Countdown',
+            color: getV('c-color') || '#6C4CF1',
+            textColor: getV('c-text-color') || '#FFFFFF',
+            numColor: getV('c-num-color') || '#FFFFFF',
+            font: getV('c-font'),
+            bg: getV('c-bg'),
+            gradient: (!getV('c-bg') && tmpl?.previewGradient) ? tmpl.previewGradient : null,
+        }, window.location.origin);
     };
 
     generateAndShow = (e) => {
         if (e) e.preventDefault();
         const finalUrl = getUrl();
-
         if (generatedUrlObj) generatedUrlObj.textContent = finalUrl;
         if (resultBox) resultBox.classList.add('active');
 
         const placeholder = document.getElementById('preview-placeholder');
         const iframe = document.getElementById('preview-iframe');
-        if (iframe) {
+        if (!iframe) return finalUrl;
+
+        if (iframe.dataset.lastUrl !== finalUrl) {
+            // Reload iframe only when URL changes
             if (placeholder) placeholder.style.display = 'none';
             iframe.style.display = 'block';
-            if (iframe.dataset.lastUrl !== finalUrl) {
-                iframe.src = finalUrl;
-                iframe.dataset.lastUrl = finalUrl;
-            }
+            iframe.src = finalUrl;
+            iframe.dataset.lastUrl = finalUrl;
+            // After load, apply postMessage for extra style sync
+            iframe.onload = () => {
+                setTimeout(sendPreviewMessage, 300);
+                scalePreviewIframe();
+            };
+        } else {
+            // URL same → just push style updates
+            sendPreviewMessage();
         }
         return finalUrl;
     };
 
-    // Real-time preview — 400ms debounce
     const form = document.getElementById('create-live-form');
-    let debounceTimer;
-    form.addEventListener('input', () => {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => generateAndShow(), 400);
-    });
-    form.addEventListener('change', () => {
-        clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(() => generateAndShow(), 200);
+
+    // Structural changes (date/template) → full reload
+    const structuralIds = ['c-date', 'c-template'];
+    structuralIds.forEach(id => {
+        document.getElementById(id)?.addEventListener('change', () => {
+            setTimeout(() => generateAndShow(), 100);
+        });
     });
 
-    // Preview button → open in new tab
+    // Visual changes → instant postMessage, no reload
+    let debounceTimer;
+    form.addEventListener('input', (evt) => {
+        const isStructural = structuralIds.includes(evt.target?.id);
+        clearTimeout(debounceTimer);
+        if (isStructural) {
+            debounceTimer = setTimeout(() => generateAndShow(), 200);
+        } else {
+            debounceTimer = setTimeout(() => sendPreviewMessage(), 150);
+        }
+    });
+
+    form.addEventListener('change', (evt) => {
+        const isStructural = structuralIds.includes(evt.target?.id);
+        if (!isStructural) {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => sendPreviewMessage(), 100);
+        }
+    });
+
     btnPreview?.addEventListener('click', (e) => {
         const url = generateAndShow(e);
         window.open(url, '_blank');
     });
 
-    // Copy link
     btnCopy?.addEventListener('click', (e) => {
         const url = generateAndShow(e);
         navigator.clipboard.writeText(url).then(() => {

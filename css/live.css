@@ -78,6 +78,7 @@ body.mode-live, body.mode-tv {
   margin-bottom: 32px;
   text-shadow: 0 4px 24px rgba(0,0,0,0.8);
   letter-spacing: -0.03em;
+  color: var(--color-text, #FFFFFF);
 }
 
 .live-countdown-wrap {
@@ -101,6 +102,7 @@ body.mode-live, body.mode-tv {
   line-height: .9;
   text-shadow: 0 10px 40px rgba(0,0,0,0.5);
   font-family: var(--font-family-numbers);
+  color: var(--color-numbers, #FFFFFF);
 }
 
 .live-label {

@@ -58,11 +58,11 @@ async function hydrateFromQuery() {
                 if (tmpl.textColor && !params.get('textColor')) textColor = tmpl.textColor;
                 if (tmpl.numColor && !params.get('numColor')) numColor = tmpl.numColor;
                 if (tmpl.font && !params.get('font')) font = tmpl.font;
-                
-                // Template specific behavior
-                if (tmpl.rules && tmpl.rules.qrVisible === false) {
-                    showQr = false;
+                if (tmpl.previewGradient && !bgUrl) {
+                    const bgEl = document.getElementById('live-bg');
+                    if (bgEl) bgEl.style.background = tmpl.previewGradient;
                 }
+                if (tmpl.rules && tmpl.rules.qrVisible === false) showQr = false;
             }
         } catch(e) { console.error("Could not fetch template data", e); }
     }
@@ -225,5 +225,28 @@ function setupAutoTvMode() {
     // Listen for changes
     mediaQuery.addEventListener('change', handleOrientationChange);
 }
+
+// Live postMessage listener for real-time preview updates from create-live page
+window.addEventListener('message', (e) => {
+    if (e.data?.type !== 'DAYZO_PREVIEW') return;
+    const d = e.data;
+    const root = document.documentElement;
+    const titleEl = document.getElementById('live-title');
+    if (d.title !== undefined && titleEl) titleEl.textContent = d.title || 'Countdown';
+    if (d.color) root.style.setProperty('--color-primary', d.color);
+    if (d.textColor) root.style.setProperty('--color-text', d.textColor);
+    if (d.numColor) root.style.setProperty('--color-numbers', d.numColor);
+    if (d.font) root.style.setProperty('--font-family-sans', d.font);
+    const bgEl = document.getElementById('live-bg');
+    if (bgEl) {
+        if (d.gradient) {
+            bgEl.style.backgroundImage = '';
+            bgEl.style.background = d.gradient;
+        } else if (d.bg !== undefined) {
+            bgEl.style.background = '';
+            bgEl.style.backgroundImage = d.bg ? `url('${d.bg}')` : '';
+        }
+    }
+});
 
 document.addEventListener('DOMContentLoaded', init);
