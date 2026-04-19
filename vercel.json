@@ -5,6 +5,16 @@
   "outputDirectory": ".",
   "routes": [
     {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml",
+      "headers": { "Content-Type": "application/xml; charset=utf-8", "Cache-Control": "public, max-age=3600" }
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt",
+      "headers": { "Content-Type": "text/plain; charset=utf-8" }
+    },
+    {
       "src": "/googlef6f8cb9b43edf411.html",
       "dest": "/googlef6f8cb9b43edf411.html",
       "headers": { "Cache-Control": "no-cache" }
