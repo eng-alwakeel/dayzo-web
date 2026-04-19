@@ -166,7 +166,9 @@
     "personal_templates_title": "व्यक्तिगत टेम्पलेट",
     "personal_templates_desc": "अपने व्यक्तिगत उत्सव के लिए एक सुंदर टेम्पलेट चुनें और इसे सेकंडों में अनुकूलित करें।",
     "homepage_meta_desc": "छुट्टियों, कार्यक्रमों और व्यक्तिगत मील के पत्थरों के लिए लाइव काउंटडाउन टाइमर। शेष दिन, घंटे और मिनट ट्रैक करें।",
-    "homepage_og_title": "Dayzo – हर कार्यक्रम के लिए लाइव काउंटडाउन"
+    "homepage_og_title": "Dayzo – हर कार्यक्रम के लिए लाइव काउंटडाउन",
+    "upload_image": "अपलोड",
+    "upload_hint": "इमेज URL चाहिए? <a href=\"https://imgbb.com\" target=\"_blank\" rel=\"noopener\">imgbb.com</a> पर अपलोड करें → इमेज पर क्लिक करें → <strong>Direct link</strong> कॉपी करें → यहाँ पेस्ट करें।"
   },
   "seo": {
     "quick_answer": "{date} को {event} होने में ठीक {days} दिन बचे हैं।",

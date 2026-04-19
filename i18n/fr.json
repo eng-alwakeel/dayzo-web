@@ -166,7 +166,9 @@
     "personal_templates_title": "Modèles Personnels",
     "personal_templates_desc": "Choisissez un beau modèle pour votre célébration personnelle et personnalisez-le en quelques secondes.",
     "homepage_meta_desc": "Minuteries de compte à rebours en direct pour les jours fériés, événements et jalons personnels. Suivez les jours, heures et minutes restants.",
-    "homepage_og_title": "Dayzo – Comptes à Rebours en Direct pour Chaque Événement"
+    "homepage_og_title": "Dayzo – Comptes à Rebours en Direct pour Chaque Événement",
+    "upload_image": "Télécharger",
+    "upload_hint": "Besoin d'une URL d'image ? Téléchargez sur <a href=\"https://imgbb.com\" target=\"_blank\" rel=\"noopener\">imgbb.com</a> → cliquez sur l'image → copiez le <strong>lien direct</strong> → collez ici."
   },
   "seo": {
     "quick_answer": "Il reste précisément {days} jours jusqu'à {event} le {date}.",

@@ -198,7 +198,9 @@
     "placeholder_cta": "Join Stream Now",
     "placeholder_video": "YouTube Embed URL",
     "homepage_meta_desc": "Live countdown timers for holidays, events, and personal milestones. Track the days, hours, and minutes remaining.",
-    "homepage_og_title": "Dayzo – Live Countdown Timers for Every Event"
+    "homepage_og_title": "Dayzo – Live Countdown Timers for Every Event",
+    "upload_image": "Upload",
+    "upload_hint": "Need an image URL? Upload on <a href=\"https://imgbb.com\" target=\"_blank\" rel=\"noopener\">imgbb.com</a> → click your image → copy the <strong>Direct link</strong> → paste here."
   },
   "seo": {
     "quick_answer": "There are precisely {days} days until {event} on {date}.",

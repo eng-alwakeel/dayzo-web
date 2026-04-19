@@ -166,7 +166,9 @@
     "personal_templates_title": "Templat Pribadi",
     "personal_templates_desc": "Pilih templat indah untuk perayaan pribadi Anda dan sesuaikan dalam hitungan detik.",
     "homepage_meta_desc": "Timer hitung mundur langsung untuk hari libur, acara, dan pencapaian pribadi. Lacak hari, jam, dan menit yang tersisa.",
-    "homepage_og_title": "Dayzo – Timer Hitung Mundur Langsung untuk Setiap Acara"
+    "homepage_og_title": "Dayzo – Timer Hitung Mundur Langsung untuk Setiap Acara",
+    "upload_image": "Unggah",
+    "upload_hint": "Butuh URL gambar? Unggah di <a href=\"https://imgbb.com\" target=\"_blank\" rel=\"noopener\">imgbb.com</a> → klik gambar Anda → salin <strong>tautan langsung</strong> → tempel di sini."
   },
   "seo": {
     "quick_answer": "Ada tepat {days} hari hingga {event} pada {date}.",

@@ -198,7 +198,9 @@
     "placeholder_cta": "انضم للبث الآن",
     "placeholder_video": "رابط تضمين يوتيوب",
     "homepage_meta_desc": "عدادات تنازلية مباشرة للأعياد والفعاليات والمناسبات الشخصية. تتبع الأيام والساعات والدقائق المتبقية.",
-    "homepage_og_title": "Dayzo – عدادات تنازلية مباشرة لكل مناسبة"
+    "homepage_og_title": "Dayzo – عدادات تنازلية مباشرة لكل مناسبة",
+    "upload_image": "رفع",
+    "upload_hint": "تحتاج رابط صورة؟ ارفعها على <a href=\"https://imgbb.com\" target=\"_blank\" rel=\"noopener\">imgbb.com</a> ← انقر على الصورة ← انسخ <strong>الرابط المباشر</strong> ← الصق هنا."
   },
   "seo": {
     "quick_answer": "يوجد تحديدًا {days} يوم حتى {event} في {date}.",

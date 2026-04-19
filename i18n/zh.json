@@ -166,7 +166,9 @@
     "personal_templates_title": "个人模板",
     "personal_templates_desc": "为您的个人庆典选择一个漂亮的模板，并在几秒钟内完成自定义。",
     "homepage_meta_desc": "节假日、活动和个人里程碑的实时倒计时计时器。追踪剩余的天数、小时和分钟。",
-    "homepage_og_title": "Dayzo – 每个活动的实时倒计时"
+    "homepage_og_title": "Dayzo – 每个活动的实时倒计时",
+    "upload_image": "上传",
+    "upload_hint": "需要图片链接？在 <a href=\"https://imgbb.com\" target=\"_blank\" rel=\"noopener\">imgbb.com</a> 上传 → 点击图片 → 复制<strong>直接链接</strong> → 粘贴到此处。"
   },
   "seo": {
     "quick_answer": "距离 {date} 的 {event} 还有整整 {days} 天。",

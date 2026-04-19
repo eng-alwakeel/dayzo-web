@@ -166,7 +166,9 @@
     "personal_templates_title": "Plantillas Personales",
     "personal_templates_desc": "Elige una plantilla hermosa para tu celebración personal y personalízala en segundos.",
     "homepage_meta_desc": "Temporizadores de cuenta regresiva en vivo para días festivos, eventos y hitos personales. Sigue los días, horas y minutos restantes.",
-    "homepage_og_title": "Dayzo – Contadores Regresivos en Vivo para Cada Evento"
+    "homepage_og_title": "Dayzo – Contadores Regresivos en Vivo para Cada Evento",
+    "upload_image": "Subir",
+    "upload_hint": "¿Necesitas una URL de imagen? Súbela en <a href=\"https://imgbb.com\" target=\"_blank\" rel=\"noopener\">imgbb.com</a> → haz clic en tu imagen → copia el <strong>enlace directo</strong> → pégalo aquí."
   },
   "seo": {
     "quick_answer": "Faltan exactamente {days} días para {event} el {date}.",

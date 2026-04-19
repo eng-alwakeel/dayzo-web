@@ -166,7 +166,9 @@
     "personal_templates_title": "Modelos Pessoais",
     "personal_templates_desc": "Escolha um belo modelo para sua celebração pessoal e personalize-o em segundos.",
     "homepage_meta_desc": "Temporizadores de contagem regressiva ao vivo para feriados, eventos e marcos pessoais. Acompanhe os dias, horas e minutos restantes.",
-    "homepage_og_title": "Dayzo – Contagens Regressivas ao Vivo para Cada Evento"
+    "homepage_og_title": "Dayzo – Contagens Regressivas ao Vivo para Cada Evento",
+    "upload_image": "Enviar",
+    "upload_hint": "Precisa de uma URL de imagem? Faça upload em <a href=\"https://imgbb.com\" target=\"_blank\" rel=\"noopener\">imgbb.com</a> → clique na imagem → copie o <strong>link direto</strong> → cole aqui."
   },
   "seo": {
     "quick_answer": "Faltam exatamente {days} dias para {event} em {date}.",
