@@ -76,6 +76,7 @@ const template = (lang) => {
     <script type="module" src="/js/core/theme.js"></script>
     <script type="module" src="/js/core/lang-switcher.js"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
     
