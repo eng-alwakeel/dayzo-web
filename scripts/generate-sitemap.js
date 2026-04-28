@@ -17,7 +17,7 @@ const allConfigs = [...globalEvents, ...variableEvents, ...localEvents, ...seaso
 const allEvents = Array.from(new Map(allConfigs.map(item => [item.slug, item])).values());
 
 const today = new Date().toISOString().split('T')[0];
-const baseUrl = 'https://dayzo-web1.vercel.app';
+const baseUrl = 'https://dayzo.com';
 
 let sitemapStr = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">

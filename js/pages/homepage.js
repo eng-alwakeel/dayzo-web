@@ -100,7 +100,7 @@ async function loadData() {
             "America/Havana":"CU","America/Santo_Domingo":"DO",
             "Asia/Riyadh":"SA","Asia/Dubai":"AE","Asia/Qatar":"QA","Asia/Kuwait":"KW","Asia/Bahrain":"BH","Asia/Muscat":"OM","Asia/Aden":"YE",
             "Asia/Baghdad":"IQ","Asia/Beirut":"LB","Asia/Damascus":"SY","Asia/Amman":"JO",
-            "Asia/Cairo":"EG","Africa/Cairo":"EG",
+
             "Asia/Kolkata":"IN","Asia/Calcutta":"IN",
             "Asia/Jakarta":"ID","Asia/Makassar":"ID","Asia/Jayapura":"ID",
             "Asia/Tokyo":"JP",
